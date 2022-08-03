@@ -7,15 +7,18 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct LaunchScreenView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        ZStack {
+            Color("dark green")
+                .ignoresSafeArea()
+            Image("logo")
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        LaunchScreenView()
     }
 }

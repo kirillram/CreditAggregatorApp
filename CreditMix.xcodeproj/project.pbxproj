@@ -8,17 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		ED99CE0D289A54D500A2DE1F /* CreditMixApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED99CE0C289A54D500A2DE1F /* CreditMixApp.swift */; };
-		ED99CE0F289A54D500A2DE1F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED99CE0E289A54D500A2DE1F /* ContentView.swift */; };
+		ED99CE0F289A54D500A2DE1F /* LaunchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED99CE0E289A54D500A2DE1F /* LaunchScreenView.swift */; };
 		ED99CE11289A54D600A2DE1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED99CE10289A54D600A2DE1F /* Assets.xcassets */; };
 		ED99CE14289A54D600A2DE1F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED99CE13289A54D600A2DE1F /* Preview Assets.xcassets */; };
+		ED99CE1C289A863B00A2DE1F /* DynamicColor in Frameworks */ = {isa = PBXBuildFile; productRef = ED99CE1B289A863B00A2DE1F /* DynamicColor */; };
+		ED99CE1E289A872C00A2DE1F /* Offers.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED99CE1D289A872C00A2DE1F /* Offers.swift */; };
+		ED99CE20289A953D00A2DE1F /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED99CE1F289A953D00A2DE1F /* TabView.swift */; };
+		ED99CE22289A9A2000A2DE1F /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED99CE21289A9A2000A2DE1F /* Utilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		ED99CE09289A54D500A2DE1F /* CreditMix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CreditMix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED99CE0C289A54D500A2DE1F /* CreditMixApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditMixApp.swift; sourceTree = "<group>"; };
-		ED99CE0E289A54D500A2DE1F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		ED99CE0E289A54D500A2DE1F /* LaunchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenView.swift; sourceTree = "<group>"; };
 		ED99CE10289A54D600A2DE1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED99CE13289A54D600A2DE1F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		ED99CE1D289A872C00A2DE1F /* Offers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Offers.swift; sourceTree = "<group>"; };
+		ED99CE1F289A953D00A2DE1F /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
+		ED99CE21289A9A2000A2DE1F /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED99CE1C289A863B00A2DE1F /* DynamicColor in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,7 +60,10 @@
 			isa = PBXGroup;
 			children = (
 				ED99CE0C289A54D500A2DE1F /* CreditMixApp.swift */,
-				ED99CE0E289A54D500A2DE1F /* ContentView.swift */,
+				ED99CE0E289A54D500A2DE1F /* LaunchScreenView.swift */,
+				ED99CE1D289A872C00A2DE1F /* Offers.swift */,
+				ED99CE1F289A953D00A2DE1F /* TabView.swift */,
+				ED99CE21289A9A2000A2DE1F /* Utilities.swift */,
 				ED99CE10289A54D600A2DE1F /* Assets.xcassets */,
 				ED99CE12289A54D600A2DE1F /* Preview Content */,
 			);
@@ -83,6 +94,9 @@
 			dependencies = (
 			);
 			name = CreditMix;
+			packageProductDependencies = (
+				ED99CE1B289A863B00A2DE1F /* DynamicColor */,
+			);
 			productName = CreditMix;
 			productReference = ED99CE09289A54D500A2DE1F /* CreditMix.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +125,9 @@
 				Base,
 			);
 			mainGroup = ED99CE00289A54D500A2DE1F;
+			packageReferences = (
+				ED99CE1A289A863B00A2DE1F /* XCRemoteSwiftPackageReference "DynamicColor" */,
+			);
 			productRefGroup = ED99CE0A289A54D500A2DE1F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,7 +154,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED99CE0F289A54D500A2DE1F /* ContentView.swift in Sources */,
+				ED99CE1E289A872C00A2DE1F /* Offers.swift in Sources */,
+				ED99CE0F289A54D500A2DE1F /* LaunchScreenView.swift in Sources */,
+				ED99CE20289A953D00A2DE1F /* TabView.swift in Sources */,
+				ED99CE22289A9A2000A2DE1F /* Utilities.swift in Sources */,
 				ED99CE0D289A54D500A2DE1F /* CreditMixApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,6 +295,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -284,7 +305,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -304,6 +325,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -313,7 +335,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -339,6 +361,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		ED99CE1A289A863B00A2DE1F /* XCRemoteSwiftPackageReference "DynamicColor" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/yannickl/DynamicColor.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		ED99CE1B289A863B00A2DE1F /* DynamicColor */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ED99CE1A289A863B00A2DE1F /* XCRemoteSwiftPackageReference "DynamicColor" */;
+			productName = DynamicColor;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = ED99CE01289A54D500A2DE1F /* Project object */;
 }

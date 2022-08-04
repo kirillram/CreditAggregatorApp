@@ -11,8 +11,10 @@ import SwiftUI
 struct CreditMixApp: App {
     var body: some Scene {
         WindowGroup {
-            OffersPageView()
+            MainView()
+                .preferredColorScheme(.dark)
                 .onAppear {
+                    
                     UIFont.familyNames.forEach({ familyName in
                         let fontNames = UIFont.fontNames(forFamilyName: familyName)
                         print(familyName, fontNames)
@@ -24,6 +26,6 @@ struct CreditMixApp: App {
 
 struct CreditMax_Previews: PreviewProvider {
     static var previews: some View {
-        OffersPageView()
+        MainView()
     }
 }

@@ -26,14 +26,12 @@ struct TabItemView: View {
             if item.image == "offers" && item.selectedImage == "offers.filled" {
                     Image(isSelected ? item.selectedImage : item.image)
                         .resizable()
-//                        .aspectRatio(contentMode: .fit)
                         .frame(width: 48, height: 48)
                         .offset(y: -10)
             } else {
                     VStack {
                         Image(isSelected ? item.selectedImage : item.image)
                             .resizable()
-//                            .aspectRatio(contentMode: .fit)
                             .frame(width: 24, height: 24)
                     }
                     .frame(width: 48, height: 48)
@@ -41,15 +39,8 @@ struct TabItemView: View {
             
             
             Text(item.title)
-                .foregroundColor(isSelected ? Color("dark green") : Color(hexString: "#373737"))
+                .foregroundColor(isSelected ? Color("dark green") : Color("black"))
                 .font(.custom("Inter-Medium", size: 13))
         }
-    }
-}
-
-struct MyPreviewProvider_Previews: PreviewProvider {
-    static var previews: some View {
-        TabView(selectedIndex: .constant(0))
-            .previewDevice("iPhone 11")
     }
 }

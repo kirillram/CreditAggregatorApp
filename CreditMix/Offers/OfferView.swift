@@ -47,8 +47,7 @@ struct OfferView: View {
                 //MARK: - Bottom
                 ZStack {
                     orange ?  Color("orange") : Color("light gray")
-                    HStack {
-                        
+                    HStack(spacing: 24) {
                         //MARK: - Left
                         VStack (alignment: .leading, spacing: 0) {
                             Text("Возраст")
@@ -59,9 +58,8 @@ struct OfferView: View {
                                 .frame(height: 24)
                                 .font(.custom("GolosText-Regular", size: 20))
                         }
-                        .frame(width: geo.size.width/2 - 32, alignment: .leading)
+                        .frame(maxWidth: geo.size.width/2, alignment: .leading)
                         .foregroundColor(orange ? .white : Color("black"))
-                        Spacer(minLength: 24)
                         
                         //MARK: - Right
                         VStack (alignment: .leading, spacing: 0) {
@@ -73,7 +71,7 @@ struct OfferView: View {
                                 .frame(height: 24)
                                 .font(.custom("GolosText-Regular", size: 20))
                         }
-                        .frame(width: geo.size.width/2 - 32, alignment: .leading)
+                        .frame(maxWidth: geo.size.width/2, alignment: .leading)
                         .foregroundColor(orange ? .white : Color("black"))
                     }
                     .padding(.horizontal, 20)
@@ -89,7 +87,7 @@ struct OfferView: View {
         .frame(height: 164)
         .padding(.vertical, 10)
         .padding(.horizontal, 16)
-        
+        .shadow(color: .white.opacity(0.04), radius: 8, x: 0, y: 2)
     }
 }
 

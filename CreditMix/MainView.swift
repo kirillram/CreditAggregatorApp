@@ -9,42 +9,40 @@ import SwiftUI
 
 struct MainView: View {
     
-    @State var selectedTab: Int = 1
+    @State var selectedTab: Int = 2
     
     var body: some View {
         
-        VStack(spacing:0) {
-            TopView(selectedIndex: $selectedTab)
-                .zIndex(1)
-            ScrollView(showsIndicators: true) {
-                
-                if selectedTab == 0 {
+        ZStack {
+            Color("background")
+            VStack(spacing:0) {
+                TopView(selectedIndex: $selectedTab)
+//                    .zIndex(1)
+                ScrollView(showsIndicators: true) {
                     
-                    VStack {
+                    if selectedTab == 0 {
+                        FaqView()
+                    } else if selectedTab == 1 {
+                        
                         ForEach(1..<7) { _ in
-                            FaqQuestionView()
+                            Button {
+                                
+                            } label: {
+                                OfferView(orange: Bool.random())
+                            }
                         }
+                    } else if selectedTab == 2 {
+                        NewsPageView()
                     }
-                    .padding(.top, 24)
-                    
-                } else if selectedTab == 1 {
-                    
-                    ForEach(1..<7) { _ in
-                        Button {
-                            
-                        } label: {
-                            OfferView(orange: Bool.random())
-                        }
-                    }
-                } else if selectedTab == 2 {
-                    
                 }
+//                .zIndex(0)
+                BottomView(selectedIndex: $selectedTab)
+//                    .zIndex(1)
             }
-            .zIndex(0)
-            BottomView(selectedIndex: $selectedTab)
-                .zIndex(1)
+            .frame(width: screenW)
+            .ignoresSafeArea(edges: .bottom)
         }
-        .background(Color("background"))
+//        .background()
     }
 }
 
@@ -54,8 +52,9 @@ struct Main_Previews: PreviewProvider {
     static var previews: some View {
         
         MainView()
+            .previewDevice("iPhone Xs")
         //            .previewDevice("iPhone 6s")
-            .previewDevice("iPhone 6s Plus")
+//            .previewDevice("iPhone 6s Plus")
         //            .previewDevice("iPhone 7")
         //            .previewDevice("iPhone 7 Plus")
         //            .previewDevice("iPhone 8")

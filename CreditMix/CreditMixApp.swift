@@ -14,11 +14,9 @@ struct CreditMixApp: App {
             MainView()
                 .preferredColorScheme(.dark)
                 .onAppear {
-                    
-                    UIFont.familyNames.forEach({ familyName in
-                        let fontNames = UIFont.fontNames(forFamilyName: familyName)
-                        print(familyName, fontNames)
-                    })
+                    UIFont.familyNames.forEach{ familyName in
+                        print(familyName, UIFont.fontNames(forFamilyName: familyName))
+                    }
                 }
         }
     }

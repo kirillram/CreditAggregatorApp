@@ -48,7 +48,13 @@
 		EDB39F79289BBB12007F85F3 /* Golos Text_Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EDB39F74289BBB12007F85F3 /* Golos Text_Medium.ttf */; };
 		EDB39F7A289BBB12007F85F3 /* Golos Text_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EDB39F75289BBB12007F85F3 /* Golos Text_Regular.ttf */; };
 		EDB39F7C289BD1E5007F85F3 /* TopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB39F7B289BD1E5007F85F3 /* TopView.swift */; };
-		EDB39F80289BEE3D007F85F3 /* FaqQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB39F7F289BEE3D007F85F3 /* FaqQuestionView.swift */; };
+		EDB39F80289BEE3D007F85F3 /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB39F7F289BEE3D007F85F3 /* QuestionView.swift */; };
+		EDC1BDDB289CF8FF00FBD424 /* QuestionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC1BDDA289CF8FF00FBD424 /* QuestionViewModel.swift */; };
+		EDC1BDDE289CFED800FBD424 /* FaqView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC1BDDD289CFED800FBD424 /* FaqView.swift */; };
+		EDC1BDE1289D082600FBD424 /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC1BDE0289D082600FBD424 /* NewsView.swift */; };
+		EDC1BDE3289D2CF700FBD424 /* NewsPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC1BDE2289D2CF700FBD424 /* NewsPageView.swift */; };
+		EDC1BDE5289D2EC800FBD424 /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC1BDE4289D2EC800FBD424 /* NewsViewModel.swift */; };
+		EDC1BDE8289D35D400FBD424 /* NewsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC1BDE7289D35D400FBD424 /* NewsDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,7 +100,13 @@
 		EDB39F74289BBB12007F85F3 /* Golos Text_Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Golos Text_Medium.ttf"; sourceTree = "<group>"; };
 		EDB39F75289BBB12007F85F3 /* Golos Text_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Golos Text_Regular.ttf"; sourceTree = "<group>"; };
 		EDB39F7B289BD1E5007F85F3 /* TopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopView.swift; sourceTree = "<group>"; };
-		EDB39F7F289BEE3D007F85F3 /* FaqQuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaqQuestionView.swift; sourceTree = "<group>"; };
+		EDB39F7F289BEE3D007F85F3 /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
+		EDC1BDDA289CF8FF00FBD424 /* QuestionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewModel.swift; sourceTree = "<group>"; };
+		EDC1BDDD289CFED800FBD424 /* FaqView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaqView.swift; sourceTree = "<group>"; };
+		EDC1BDE0289D082600FBD424 /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
+		EDC1BDE2289D2CF700FBD424 /* NewsPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsPageView.swift; sourceTree = "<group>"; };
+		EDC1BDE4289D2EC800FBD424 /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
+		EDC1BDE7289D35D400FBD424 /* NewsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,8 +144,9 @@
 				ED99CE0E289A54D500A2DE1F /* LaunchScreenView.swift */,
 				EDB39F6A289BA41A007F85F3 /* Info.plist */,
 				ED99CE1D289A872C00A2DE1F /* MainView.swift */,
-				EDB39F6F289BB39F007F85F3 /* OfferView.swift */,
-				EDB39F7F289BEE3D007F85F3 /* FaqQuestionView.swift */,
+				EDC1BDE6289D32FD00FBD424 /* News */,
+				EDC1BDDF289D081800FBD424 /* Offers */,
+				EDC1BDDC289CFE7200FBD424 /* Faq */,
 				EDB39F6D289BB1D3007F85F3 /* TabView */,
 				ED99CE10289A54D600A2DE1F /* Assets.xcassets */,
 				EDB39F35289BA23E007F85F3 /* Utilities.swift */,
@@ -192,10 +205,39 @@
 			isa = PBXGroup;
 			children = (
 				ED99CE1F289A953D00A2DE1F /* BottomView.swift */,
-				EDB39F6B289BA7DF007F85F3 /* TabItemView.swift */,
 				EDB39F7B289BD1E5007F85F3 /* TopView.swift */,
+				EDB39F6B289BA7DF007F85F3 /* TabItemView.swift */,
 			);
 			path = TabView;
+			sourceTree = "<group>";
+		};
+		EDC1BDDC289CFE7200FBD424 /* Faq */ = {
+			isa = PBXGroup;
+			children = (
+				EDC1BDDD289CFED800FBD424 /* FaqView.swift */,
+				EDB39F7F289BEE3D007F85F3 /* QuestionView.swift */,
+				EDC1BDDA289CF8FF00FBD424 /* QuestionViewModel.swift */,
+			);
+			path = Faq;
+			sourceTree = "<group>";
+		};
+		EDC1BDDF289D081800FBD424 /* Offers */ = {
+			isa = PBXGroup;
+			children = (
+				EDB39F6F289BB39F007F85F3 /* OfferView.swift */,
+			);
+			path = Offers;
+			sourceTree = "<group>";
+		};
+		EDC1BDE6289D32FD00FBD424 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				EDC1BDE0289D082600FBD424 /* NewsView.swift */,
+				EDC1BDE4289D2EC800FBD424 /* NewsViewModel.swift */,
+				EDC1BDE7289D35D400FBD424 /* NewsDetailView.swift */,
+				EDC1BDE2289D2CF700FBD424 /* NewsPageView.swift */,
+			);
+			path = News;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,13 +346,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDC1BDDE289CFED800FBD424 /* FaqView.swift in Sources */,
 				EDB39F7C289BD1E5007F85F3 /* TopView.swift in Sources */,
-				EDB39F80289BEE3D007F85F3 /* FaqQuestionView.swift in Sources */,
+				EDC1BDDB289CF8FF00FBD424 /* QuestionViewModel.swift in Sources */,
+				EDC1BDE3289D2CF700FBD424 /* NewsPageView.swift in Sources */,
+				EDC1BDE8289D35D400FBD424 /* NewsDetailView.swift in Sources */,
+				EDB39F80289BEE3D007F85F3 /* QuestionView.swift in Sources */,
 				ED99CE1E289A872C00A2DE1F /* MainView.swift in Sources */,
 				EDB39F70289BB39F007F85F3 /* OfferView.swift in Sources */,
+				EDC1BDE1289D082600FBD424 /* NewsView.swift in Sources */,
 				ED99CE0F289A54D500A2DE1F /* LaunchScreenView.swift in Sources */,
 				ED99CE20289A953D00A2DE1F /* BottomView.swift in Sources */,
 				EDB39F6C289BA7DF007F85F3 /* TabItemView.swift in Sources */,
+				EDC1BDE5289D2EC800FBD424 /* NewsViewModel.swift in Sources */,
 				EDB39F36289BA23E007F85F3 /* Utilities.swift in Sources */,
 				ED99CE0D289A54D500A2DE1F /* CreditMixApp.swift in Sources */,
 			);
@@ -448,8 +496,9 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -479,8 +528,9 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

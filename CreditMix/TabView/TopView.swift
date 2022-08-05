@@ -31,7 +31,7 @@ struct TopView: View {
             Color("dark green")
                 .cornerRadius(20, corners: [.bottomLeft, .bottomRight])
                 .ignoresSafeArea()
-                .shadow(radius: 5, x: 5, y: 4)
+                .shadow(color: .white.opacity(0.1), radius: 20, x: 0, y: 4)
         )
         
     }

@@ -21,7 +21,7 @@ struct NewsView: View {
             
             Image(image)
                 .resizable()
-                .frame(width: .infinity, height: 204)
+                .frame(height: 204)
                 .clipped()
             
             VStack(alignment: .leading, spacing: 8) {

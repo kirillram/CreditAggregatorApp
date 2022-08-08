@@ -26,15 +26,15 @@ struct TabItemView: View {
             if item.image == "offers" && item.selectedImage == "offers.filled" {
                     Image(isSelected ? item.selectedImage : item.image)
                         .resizable()
-                        .frame(width: 48, height: 48)
                         .offset(y: -10)
+                        .frame(width: 48, height: 48)
             } else {
-                    VStack {
+                VStack {
                         Image(isSelected ? item.selectedImage : item.image)
                             .resizable()
                             .frame(width: 24, height: 24)
                     }
-                    .frame(width: 48, height: 48)
+                .frame(width: 48, height: 48)
             }
             
             

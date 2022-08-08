@@ -19,7 +19,8 @@ struct BottomView: View {
     var body: some View {
         
         
-        HStack(alignment: .top) {
+        VStack {
+            Spacer()
             HStack {
                 Spacer()
                 ForEach(tabbarItems.indices) { index in
@@ -27,19 +28,21 @@ struct BottomView: View {
                         self.selectedIndex = index
                     } label: {
                         TabItemView(item: tabbarItems[index], isSelected: selectedIndex == index)
-                            .frame(width: 110)
+                            .frame(width: 110, height: 94)
                     }
+                    .buttonStyle(TabButtonStyle())
+                    
                     Spacer()
                 }
             }
             .offset(y: -10)
+            .frame(height: 94)
+            .background(
+                Color.white
+                    .cornerRadius(20, corners: [.topLeft, .topRight])
+                    .shadow(color: .white.opacity(0.1), radius: 16, x: 0, y: -4)
+            )
         }
-        .frame(width: .infinity, height: 94)
-        .background(
-            Color.white
-                .cornerRadius(20, corners: [.topLeft, .topRight])
-                .shadow(color: .white.opacity(0.1), radius: 16, x: 0, y: -4)
-        )
     }
 }
 
@@ -47,26 +50,28 @@ struct tab_Previews: PreviewProvider {
     static var previews: some View {
         
         MainView()
-//            .previewDevice("iPhone 6s")
-//            .previewDevice("iPhone 6s Plus")
-//            .previewDevice("iPhone 7")
-//            .previewDevice("iPhone 7 Plus")
-//            .previewDevice("iPhone 8")
-//            .previewDevice("iPhone 8 Plus")
-//            .previewDevice("iPhone 11 Pro")
-//            .previewDevice("iPhone 11 Pro Max")
-//            .previewDevice("iPhone 12")
-//            .previewDevice("iPhone 12 Pro")
-//            .previewDevice("iPhone 12 Pro Max")
-//            .previewDevice("iPhone 12 mini")
-//            .previewDevice("iPhone 13 mini")
-//            .previewDevice("iPhone 13 Pro")
-//            .previewDevice("iPhone 13 Pro Max")
-//            .previewDevice("iPhone SE (1st generation)")
-//            .previewDevice("iPhone SE (3rd generation)")
-//            .previewDevice("iPhone X")
+        
+        //            .previewDevice("iPhone 6s")
+        //            .previewDevice("iPhone 6s Plus")
+        //            .previewDevice("iPhone 7")
+        //            .previewDevice("iPhone 7 Plus")
+        //            .previewDevice("iPhone 8")
+        //            .previewDevice("iPhone 8 Plus")
+            .previewDevice("iPhone 11")
+        //            .previewDevice("iPhone 11 Pro")
+        //            .previewDevice("iPhone 11 Pro Max")
+        //            .previewDevice("iPhone 12")
+        //            .previewDevice("iPhone 12 Pro")
+        //            .previewDevice("iPhone 12 Pro Max")
+        //            .previewDevice("iPhone 12 mini")
+        //            .previewDevice("iPhone 13 mini")
+        //            .previewDevice("iPhone 13 Pro")
+        //            .previewDevice("iPhone 13 Pro Max")
+        //            .previewDevice("iPhone SE (1st generation)")
+        //            .previewDevice("iPhone SE (3rd generation)")
+        //            .previewDevice("iPhone X")
 //            .previewDevice("iPhone Xs")
-//            .previewDevice("iPhone Xs Max")
-//            .previewDevice("iPhone Xr")
+        //            .previewDevice("iPhone Xs Max")
+        //            .previewDevice("iPhone Xr")
     }
 }

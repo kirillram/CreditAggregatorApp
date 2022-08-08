@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct FaqView: View {
+struct FaqPageView: View {
     
     @StateObject var qvModel = QuestionViewModel()
     
@@ -15,14 +15,15 @@ struct FaqView: View {
         VStack {
             ForEach(qvModel.faqQuestions, id: \.self) { item in
                 QuestionView(question: item.question, answer: item.answer)
+            }
         }
-        }
-        .padding(.top, 24)
+        .padding(.top, 84)
+        .padding(.bottom, 94)
     }
 }
 
 struct FaqView_Previews: PreviewProvider {
     static var previews: some View {
-        FaqView()
+        MainView()
     }
 }

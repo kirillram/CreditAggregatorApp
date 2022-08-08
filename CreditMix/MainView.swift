@@ -15,34 +15,25 @@ struct MainView: View {
         
         ZStack {
             Color("background")
-            VStack(spacing:0) {
-                TopView(selectedIndex: $selectedTab)
-//                    .zIndex(1)
-                ScrollView(showsIndicators: true) {
-                    
-                    if selectedTab == 0 {
-                        FaqView()
-                    } else if selectedTab == 1 {
-                        
-                        ForEach(1..<7) { _ in
-                            Button {
-                                
-                            } label: {
-                                OfferView(orange: Bool.random())
-                            }
-                        }
-                    } else if selectedTab == 2 {
-                        NewsPageView()
-                    }
+            
+            ScrollView(showsIndicators: true) {
+                
+                if selectedTab == 0 {
+                    FaqPageView()
+                } else if selectedTab == 1 {
+                    OffersPageView()
+                } else if selectedTab == 2 {
+                    NewsPageView()
                 }
-//                .zIndex(0)
-                BottomView(selectedIndex: $selectedTab)
-//                    .zIndex(1)
             }
-            .frame(width: screenW)
-            .ignoresSafeArea(edges: .bottom)
+            .zIndex(0)
+            .ignoresSafeArea(.all, edges: .bottom)
+            TopView(selectedIndex: $selectedTab)
+                .zIndex(1)
+            BottomView(selectedIndex: $selectedTab)
+                .ignoresSafeArea(.all, edges: .bottom)
+                .zIndex(1)
         }
-//        .background()
     }
 }
 
@@ -52,13 +43,15 @@ struct Main_Previews: PreviewProvider {
     static var previews: some View {
         
         MainView()
-            .previewDevice("iPhone Xs")
+//            .previewLayout(.sizeThatFits)
+//            .previewDevice("iPhone Xs")
         //            .previewDevice("iPhone 6s")
-//            .previewDevice("iPhone 6s Plus")
+        //            .previewDevice("iPhone 6s Plus")
         //            .previewDevice("iPhone 7")
         //            .previewDevice("iPhone 7 Plus")
         //            .previewDevice("iPhone 8")
         //            .previewDevice("iPhone 8 Plus")
+                    .previewDevice("iPhone 11")
         //            .previewDevice("iPhone 11 Pro")
         //            .previewDevice("iPhone 11 Pro Max")
         //            .previewDevice("iPhone 12")

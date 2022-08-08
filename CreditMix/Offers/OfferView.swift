@@ -43,7 +43,7 @@ struct OfferView: View {
                 Rectangle()
                     .frame(height: 1)
                     .foregroundColor(orange ? Color("orange border") : Color("border"))
-
+                
                 //MARK: - Bottom
                 ZStack {
                     orange ?  Color("orange") : Color("light gray")
@@ -78,14 +78,13 @@ struct OfferView: View {
                     .padding(.vertical, 16)
                 }
                 .frame(width: geo.size.width, height: geo.size.height * 0.55)
-//                .border(Color(hexString: "border").opacity(orange ? 0 : 0.08))
             }
         }
         .overlay(RoundedRectangle(cornerRadius: 12)
             .stroke(orange ? Color("orange border") : Color("border")))
         .cornerRadius(12)
         .frame(height: 164)
-        .padding(.vertical, 10)
+        .padding(.bottom, 20)
         .padding(.horizontal, 16)
         .shadow(color: .white.opacity(0.04), radius: 8, x: 0, y: 2)
     }

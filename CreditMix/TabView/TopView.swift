@@ -19,20 +19,28 @@ struct TopView: View {
     
     var body: some View {
         
+        VStack {
             HStack {
-            Text(tabbarItems[selectedIndex].title)
-                .font(.custom("Manrope-Bold", size: 28))
-                .foregroundColor(.white)
-                .padding(.horizontal)
-                .padding(.vertical, 20)
+                Text(tabbarItems[selectedIndex].title)
+                    .font(.custom("Manrope-Bold", size: 28))
+                    .foregroundColor(.white)
+                    .padding(.horizontal)
+                    .padding(.vertical, 20)
+            }
+            .frame(width: screenW, height: 64)
+            .background(
+                Color("dark green")
+                    .cornerRadius(20, corners: [.bottomLeft, .bottomRight])
+                    .ignoresSafeArea()
+                    .shadow(color: .white.opacity(0.1), radius: 20, x: 0, y: 4)
+            )
+            Spacer()
         }
-        .frame(width: screenW)
-        .background(
-            Color("dark green")
-                .cornerRadius(20, corners: [.bottomLeft, .bottomRight])
-                .ignoresSafeArea()
-                .shadow(color: .white.opacity(0.1), radius: 20, x: 0, y: 4)
-        )
-        
+    }
+}
+
+struct   adssa_Previews: PreviewProvider {
+    static var previews: some View {
+        MainView()
     }
 }

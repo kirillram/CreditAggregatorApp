@@ -1,27 +1,21 @@
 //
-//  NewsPageView.swift
+//  OffersView.swift
 //  CreditMix
 //
-//  Created by Кирилл on 05.08.2022.
+//  Created by Кирилл on 08.08.2022.
 //
 
 import SwiftUI
 
-struct NewsPageView: View {
-    
-    @State var showDetailView = false
-    
+struct OffersPageView: View {
     var body: some View {
         
         VStack {
         ForEach(1..<7) { _ in
             Button {
-                showDetailView.toggle()
+                
             } label: {
-                NewsView()
-            }
-            .fullScreenCover(isPresented: $showDetailView) {
-                NewsDetailView()
+                OfferView(orange: Bool.random())
             }
             .buttonStyle(MenuButtonsStyle())
         }
@@ -31,7 +25,7 @@ struct NewsPageView: View {
     }
 }
 
-struct NewsPageView_Previews: PreviewProvider {
+struct OffersView_Previews: PreviewProvider {
     static var previews: some View {
         MainView()
     }

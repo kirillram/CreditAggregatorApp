@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct OffersPageView: View {
+    
     var body: some View {
         
         VStack {
@@ -15,7 +16,7 @@ struct OffersPageView: View {
             Button {
                 
             } label: {
-                OfferView(orange: Bool.random())
+                OfferView()
             }
             .buttonStyle(MenuButtonsStyle())
         }

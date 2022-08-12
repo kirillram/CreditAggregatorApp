@@ -10,6 +10,7 @@ import SwiftUI
 struct NewsPageView: View {
     
     @State var showDetailView = false
+    let url = Bundle.main.url(forResource: "News Example/index", withExtension: "html")
     
     var body: some View {
         
@@ -21,7 +22,9 @@ struct NewsPageView: View {
                 NewsView()
             }
             .fullScreenCover(isPresented: $showDetailView) {
-                NewsDetailView()
+//                NewsDetailView()
+                NewsDetailWebView(url: url)
+                    .ignoresSafeArea()
             }
             .buttonStyle(MenuButtonsStyle())
         }
@@ -33,6 +36,8 @@ struct NewsPageView: View {
 
 struct NewsPageView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView()
+        let url = Bundle.main.url(forResource: "News Example/index", withExtension: "html")
+        NewsDetailWebView(url: url)
+//        MainView()
     }
 }

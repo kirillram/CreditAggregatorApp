@@ -7,13 +7,6 @@
 
 import Foundation
 import SwiftUI
-import DynamicColor
-
-struct TabItem {
-    let image: String
-    let selectedImage: String
-    let title: String
-}
 
 struct TabItemView: View {
     

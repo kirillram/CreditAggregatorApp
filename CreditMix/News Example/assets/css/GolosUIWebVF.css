@@ -1,0 +1,11 @@
+@font-face {
+	font-family: 'GolosUIWebVF';
+	src: url(../../assets/fonts/Golos%20UI_VF.eot) format('embedded-opentype'),
+	url(../../assets/fonts/Golos%20UI_VF.eot) format('embedded-opentype'),
+	url(../../assets/fonts/Golos%20UI_VF.woff2) format('woff2'),
+	url(../../assets/fonts/Golos%20UI_VF.woff) format('woff'),
+	url(../../assets/fonts/Golos%20UI_VF.ttf) format('truetype');
+	font-weight: normal;
+	font-style: normal;
+	font-display: auto;
+}

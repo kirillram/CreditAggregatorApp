@@ -6,11 +6,11 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct NewsDetailView: View {
     
     @Environment(\.presentationMode) var presentationMode
-    
     @StateObject var nvModel = NewsViewModel()
     
     var body: some View {
@@ -30,12 +30,11 @@ struct NewsDetailView: View {
                         .font(.custom("Manrope-ExtraBold", size: 28))
                         .padding(.bottom, 20)
                     Text(nvModel.news[0].text)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .font(.custom("Inter-Regular", size: 18))
                 }
                 .padding(.horizontal, 20)
             }
             .ignoresSafeArea(.all, edges: .top)
+            
             
             GeometryReader { geo in
                 Button {
@@ -49,7 +48,8 @@ struct NewsDetailView: View {
             }
             .padding(20)
         }
-        .preferredColorScheme(.dark)
+        
+        .preferredColorScheme(.light)
     }
 }
 struct NewsDetailView_Previews: PreviewProvider {

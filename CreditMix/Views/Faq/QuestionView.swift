@@ -47,10 +47,11 @@ struct QuestionView: View {
                     .frame(height: 1)
                     .foregroundColor(Color("border"))
                 
-                    HStack {
+                HStack {
                         Text(answer)
                             .font(.custom("Inter-Regular", size: 16))
                             .foregroundColor(Color("black"))
+                            .frame(maxWidth: .infinity, alignment: .leading)
                             .padding(20)
                             .multilineTextAlignment(.leading)
                     }
@@ -72,7 +73,7 @@ struct  zsad_Previews: PreviewProvider {
         
         ZStack {
             Color.red
-            QuestionView(question: "Сколько я могу занять?", answer: "Основным фактором определяющим сумму, на которую вы можете претендовать, является Ваш кредитный рейтинг. Он складывается из вашей кредитной истории и соотношения долга к доходу")
+            QuestionView(question: "¿Cuánto me pueden prestar?", answer: "El principal factor que determina la cantidad que puede solicitar es su calificación crediticia. Se basa en su historial de crédito y en su relación entre la deuda y los ingresos")
         }
     }
 }

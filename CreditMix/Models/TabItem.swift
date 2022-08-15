@@ -6,9 +6,10 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct TabItem {
     let image: String
     let selectedImage: String
-    let title: String
+    let title: LocalizedStringKey
 }

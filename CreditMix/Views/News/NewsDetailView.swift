@@ -13,27 +13,12 @@ struct NewsDetailView: View {
     @Environment(\.presentationMode) var presentationMode
     @StateObject var nvModel = NewsViewModel()
     
+    let url = Bundle.main.url(forResource: "News Example/index", withExtension: "html")
+    
     var body: some View {
         ZStack {
-            ScrollView {
-                Image(nvModel.news[0].image)
-                    .resizable()
-                    .scaledToFill()
-                    .frame(height: 210)
-                    .clipped()
-                VStack(alignment: .leading, spacing: 0) {
-                    Text(nvModel.news[0].date)
-                        .font(.custom("Inter-Regular", size: 16))
-                        .padding(.bottom, 8)
-                    Text(nvModel.news[0].title)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .font(.custom("Manrope-ExtraBold", size: 28))
-                        .padding(.bottom, 20)
-                    Text(nvModel.news[0].text)
-                }
-                .padding(.horizontal, 20)
-            }
-            .ignoresSafeArea(.all, edges: .top)
+            NewsWebView(url: url)
+            .ignoresSafeArea()
             
             
             GeometryReader { geo in

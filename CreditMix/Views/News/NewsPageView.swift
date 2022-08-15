@@ -22,9 +22,7 @@ struct NewsPageView: View {
                 NewsView()
             }
             .fullScreenCover(isPresented: $showDetailView) {
-//                NewsDetailView()
-                NewsDetailWebView(url: url)
-                    .ignoresSafeArea()
+                NewsDetailView()
             }
             .buttonStyle(MenuButtonsStyle())
         }
@@ -37,7 +35,7 @@ struct NewsPageView: View {
 struct NewsPageView_Previews: PreviewProvider {
     static var previews: some View {
         let url = Bundle.main.url(forResource: "News Example/index", withExtension: "html")
-        NewsDetailWebView(url: url)
+        NewsWebView(url: url)
 //        MainView()
     }
 }

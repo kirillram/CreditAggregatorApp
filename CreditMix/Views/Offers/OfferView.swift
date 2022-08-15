@@ -41,11 +41,15 @@ struct OfferView: View {
                     HStack(spacing: 24) {
                         //MARK: - Left
                         VStack (alignment: .leading, spacing: 0) {
-                            Text("Возраст")
+                            Text("Age")
                                 .frame(height: 24)
                                 .font(.custom("GolosText-Regular", size: 16))
                                 .opacity(ofvModel.orange ? 1 : 0.8)
-                            Text("от \(ofvModel.allowedAge)")
+                            
+                            HStack {
+                                Text(LocalizedStringKey("from "))
+                                Text(ofvModel.allowedAge)
+                            }
                                 .frame(height: 24)
                                 .font(.custom("GolosText-Regular", size: 20))
                         }
@@ -54,7 +58,7 @@ struct OfferView: View {
                         
                         //MARK: - Right
                         VStack (alignment: .leading, spacing: 0) {
-                            Text("Сумма до")
+                            Text("Amount up to")
                                 .frame(height: 24)
                                 .font(.custom("GolosText-Regular", size: 16))
                                 .opacity(ofvModel.orange ? 1 : 0.8)
@@ -84,5 +88,13 @@ struct OfferView: View {
 struct OfferView_Previews: PreviewProvider {
     static var previews: some View {
         OfferView()
+            .environment(\.locale, .init(identifier: "es"))
     }
 }
+
+//enum Translation {
+//
+//    static func title(name: String) -> String {
+//        return String.localizedStringWithFormat(NSLocalizedString("Welcome %@, this is my app", comment: ""), name)
+//    }
+//}

@@ -14,8 +14,8 @@ struct TopView: View {
     
     let tabbarItems =  [
         TabItem(image: "faq", selectedImage: "faq.filled", title: "FAQ"),
-        TabItem(image: "offers", selectedImage: "offers.filled", title: "Предложения"),
-        TabItem(image: "news", selectedImage: "news.filled", title: "Новости")]
+        TabItem(image: "offers", selectedImage: "offers.filled", title: "Offers"),
+        TabItem(image: "news", selectedImage: "news.filled", title: "News")]
     
     var body: some View {
         
@@ -42,5 +42,6 @@ struct TopView: View {
 struct   adssa_Previews: PreviewProvider {
     static var previews: some View {
         MainView()
+        
     }
 }

@@ -11,8 +11,8 @@ struct BottomView: View {
     
     let tabbarItems =  [
         TabItem(image: "faq", selectedImage: "faq.filled", title: "FAQ"),
-        TabItem(image: "offers", selectedImage: "offers.filled", title: "Предложения"),
-        TabItem(image: "news", selectedImage: "news.filled", title: "Новости")]
+        TabItem(image: "offers", selectedImage: "offers.filled", title: "Offers"),
+        TabItem(image: "news", selectedImage: "news.filled", title: "News")]
     
     @Binding var selectedIndex: Int
     

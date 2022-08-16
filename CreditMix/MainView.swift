@@ -28,6 +28,7 @@ struct MainView: View {
             }
             .zIndex(0)
             .ignoresSafeArea(.all, edges: .bottom)
+            
             TopView(selectedIndex: $selectedTab)
                 .zIndex(1)
             BottomView(selectedIndex: $selectedTab)
@@ -43,6 +44,7 @@ struct Main_Previews: PreviewProvider {
     static var previews: some View {
         
         MainView()
+            .environment(\.locale, .init(identifier: "en"))
 //            .previewLayout(.sizeThatFits)
 //            .previewDevice("iPhone Xs")
         //            .previewDevice("iPhone 6s")

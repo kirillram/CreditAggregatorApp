@@ -8,8 +8,8 @@
 import Foundation
 
 struct Offer {
-    
-    let offerSum: String
+    let offerSum: Int
+    let currency: String
     let allowedAge: Int
     let orange: Bool
 }

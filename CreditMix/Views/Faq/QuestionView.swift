@@ -25,7 +25,7 @@ struct QuestionView: View {
                 }
             } label: {
                 HStack{
-                    Text(question)
+                    Text(LocalizedStringKey(question))
                         .foregroundColor(Color("black"))
                         .font(.custom("Manrope-ExtraBold", size: 16))
                         .padding([.leading, .vertical], 16)
@@ -48,7 +48,7 @@ struct QuestionView: View {
                     .foregroundColor(Color("border"))
                 
                 HStack {
-                        Text(answer)
+                        Text(LocalizedStringKey(answer))
                             .font(.custom("Inter-Regular", size: 16))
                             .foregroundColor(Color("black"))
                             .frame(maxWidth: .infinity, alignment: .leading)

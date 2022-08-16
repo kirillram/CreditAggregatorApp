@@ -6,10 +6,14 @@
 //
 
 import Foundation
+import CloudKit
+import SwiftUI
 
-struct NewsModel: Hashable {
+struct News {
+    
+    let recordId: CKRecord.ID?
     let title: String
-    let text: String
     let date: String
-    let image: String
+    let webPage: URL?
+    let image: Image
 }

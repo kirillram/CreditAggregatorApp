@@ -10,13 +10,12 @@ import SwiftUI
 import WebKit
 
 struct NewsWebView: UIViewRepresentable {
-    
+
     let url: URL?
     
     func makeUIView(context: Context) -> WKWebView {
         let view = WKWebView()
         view.scrollView.contentInsetAdjustmentBehavior = .never
-        
         return view
     }
     func updateUIView(_ uiView: WKWebView, context: Context) {

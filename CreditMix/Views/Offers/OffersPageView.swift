@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CloudKit
 
 struct OffersPageView: View {
     

@@ -14,6 +14,7 @@ struct BottomView: View {
         TabItem(image: "offers", selectedImage: "offers.filled", title: "Offers"),
         TabItem(image: "news", selectedImage: "news.filled", title: "News")]
     
+    
     @Binding var selectedIndex: Int
     
     var body: some View {

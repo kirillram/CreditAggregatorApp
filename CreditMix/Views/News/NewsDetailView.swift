@@ -11,15 +11,31 @@ import UIKit
 struct NewsDetailView: View {
     
     @Environment(\.presentationMode) var presentationMode
-    @StateObject var nvModel = NewsViewModel()
     
-    let url = Bundle.main.url(forResource: "News Example/index", withExtension: "html")
+    @State var showDetailView = false
+    @State var size = CGSize()
+    @State var url: URL?
+//    let url = URL(string: "https://buolnd.com/Fv0k")
+//    let url = Bundle.main.url(forResource: "News Example/index", withExtension: "html")
+    
     
     var body: some View {
         ZStack {
-            NewsWebView(url: url)
-            .ignoresSafeArea()
-            
+                NewsWebView(url: url)
+                    .ignoresSafeArea()
+//                VStack {
+//                    ForEach(1..<3) { _ in
+//                        Button {
+//                            showDetailView.toggle()
+//                        } label: {
+//                            NewsView()
+//                        }
+//                        .fullScreenCover(isPresented: $showDetailView) {
+//                            NewsDetailView()
+//                        }
+//                        .buttonStyle(MenuButtonsStyle())
+//                    }
+//                }
             
             GeometryReader { geo in
                 Button {

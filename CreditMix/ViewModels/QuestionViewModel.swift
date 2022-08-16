@@ -13,11 +13,11 @@ class QuestionViewModel: ObservableObject {
     
     @Published var opened = false
     @Published var faqQuestions = [
-        QuestionModel(question: "¿Cuánto me pueden prestar?", answer: "El principal factor que determina la cantidad que puede solicitar es su calificación crediticia. Se basa en su historial de crédito y en su relación entre la deuda y los ingresos"),
-        QuestionModel(question: "¿Cuál es el crédito máximo que puedo pedir?", answer: "Por lo general, los nuevos clientes pueden recibir una aprobación de entre 1.000 y 20.000 El volumen del primer préstamo depende de los ingresos permanentes del prestatario, del plazo y del historial crediticio"),
-        QuestionModel(question: "¿Aprobarán la solicitud sin el empleo oficial?", answer: "Sí, algunas empresas permiten solicitar préstamos a personas que no tienen un empleo oficial"),
-        QuestionModel(question: "¿Qué documentos necesito para solicitar un préstamo?", answer: "Es obligatorio preparar un pasaporte en cualquier caso. Además, puede aportar todos los certificados y documentos que demuestren su solvencia, pero normalmente no es necesario. Cuantos más documentos tenga, más favorables pueden ser las condiciones"),
-        QuestionModel(question: "¿Con qué rapidez se recibe el dinero?", answer: "El préstamo aprobado se transfiere desde unos minutos hasta unos días, dependiendo del servicio.")
+        QuestionModel(question: "How much can I borrow?", answer: "The main factor that determines how much you can borrow is your credit score. It is based on your credit history and your debt-to-income ratio."),
+        QuestionModel(question: "What is the maximum credit I can borrow?", answer: "Generally, new customers can be approved for between 1,000 and 20,000 The size of the first loan depends on the borrower's ongoing income, term and credit history."),
+        QuestionModel(question: "Will they approve the application without the official job?", answer: "Yes, some companies allow people who are not formally employed to apply for loans."),
+        QuestionModel(question: "What documents do I need to apply for a loan?", answer: "It is mandatory to prepare a passport in any case. In addition, you can provide all certificates and documents proving your solvency, but normally it is not necessary. The more documents you have, the more favorable the conditions may be."),
+        QuestionModel(question: "How quickly do you receive the money?", answer: "The approved loan is transferred from a few minutes to a few days, depending on the service.")
     ]
     
     func chooseBorderColor() -> Color {

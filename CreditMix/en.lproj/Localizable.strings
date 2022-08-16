@@ -6,7 +6,16 @@
   
 */
 
+// Menu + Offers
+
 "News" = "News";
 "Offers" = "Offers";
 "Amount up to" = "Amount up to";
-"Age from" = "Age from";
+"Age" = "Age";
+"from " = "from ";
+
+// FAQ
+
+"How much can I borrow?" = "How much can I borrow?";
+"The main factor that determines how much you can borrow is your credit score. It is based on your credit history and your debt-to-income ratio." = "The main factor that determines how much you can borrow is your credit score. It is based on your credit history and your debt-to-income ratio.";
+

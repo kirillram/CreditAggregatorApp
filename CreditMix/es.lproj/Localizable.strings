@@ -6,8 +6,27 @@
   
 */
 
+//Menu + Offers
+
 "News" = "Noticias";
 "Offers" = "Ofertas";
 "Amount up to" = "Suma de";
 "Age" = "Edad a partir";
 "from " = "de ";
+
+// FAQ
+
+"How much can I borrow?" = "¿Cuánto me pueden prestar?";
+"The main factor that determines how much you can borrow is your credit score. It is based on your credit history and your debt-to-income ratio." = "El principal factor que determina la cantidad que puede solicitar es su calificación crediticia. Se basa en su historial de crédito y en su relación entre la deuda y los ingresos.";
+
+"What is the maximum credit I can borrow?" = "¿Cuál es el crédito máximo que puedo pedir?";
+"Generally, new customers can be approved for between 1,000 and 20,000 The size of the first loan depends on the borrower's ongoing income, term and credit history." = "Por lo general, los nuevos clientes pueden recibir una aprobación de entre 1.000 y 20.000 El volumen del primer préstamo depende de los ingresos permanentes del prestatario, del plazo y del historial crediticio.";
+
+"Will they approve the application without the official job?" = "¿Aprobarán la solicitud sin el empleo oficial?";
+"Yes, some companies allow people who are not formally employed to apply for loans." = "Sí, algunas empresas permiten solicitar préstamos a personas que no tienen un empleo oficial.";
+
+"What documents do I need to apply for a loan?" = "¿Qué documentos necesito para solicitar un préstamo?";
+"It is mandatory to prepare a passport in any case. In addition, you can provide all certificates and documents proving your solvency, but normally it is not necessary. The more documents you have, the more favorable the conditions may be." = "Es obligatorio preparar un pasaporte en cualquier caso. Además, puede aportar todos los certificados y documentos que demuestren su solvencia, pero normalmente no es necesario. Cuantos más documentos tenga, más favorables pueden ser las condiciones.";
+
+"How quickly do you receive the money?" = "¿Con qué rapidez se recibe el dinero?";
+"The approved loan is transferred from a few minutes to a few days, depending on the service." = "El préstamo aprobado se transfiere desde unos minutos hasta unos días, dependiendo del servicio.";

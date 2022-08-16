@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED24514728AA30A8007C3FF1 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED24514628AA30A8007C3FF1 /* CloudKit.framework */; };
 		ED47C74128A95BA100CA1C71 /* News Example in Resources */ = {isa = PBXBuildFile; fileRef = ED47C74028A95BA100CA1C71 /* News Example */; };
 		ED47C74B28AA08E700CA1C71 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = ED47C74D28AA08E700CA1C71 /* Localizable.strings */; };
 		ED4BF97328A129AB001E29E7 /* OffersPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4BF97228A129AB001E29E7 /* OffersPageView.swift */; };
@@ -68,10 +69,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		ED24514628AA30A8007C3FF1 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		ED24514E28ABABC6007C3FF1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		ED47C74028A95BA100CA1C71 /* News Example */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "News Example"; path = "../../../../../Desktop/News Example"; sourceTree = "<group>"; };
 		ED47C74228AA04ED00CA1C71 /* CreditMix.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CreditMix.entitlements; sourceTree = "<group>"; };
 		ED47C74C28AA08E700CA1C71 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
-		ED47C74E28AA08EC00CA1C71 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		ED47C74F28AA096800CA1C71 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
 		ED4BF97228A129AB001E29E7 /* OffersPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersPageView.swift; sourceTree = "<group>"; };
 		ED99CE09289A54D500A2DE1F /* CreditMix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CreditMix.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -138,17 +140,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED24514728AA30A8007C3FF1 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ED24514528AA30A8007C3FF1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ED24514628AA30A8007C3FF1 /* CloudKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		ED99CE00289A54D500A2DE1F = {
 			isa = PBXGroup;
 			children = (
 				ED99CE0B289A54D500A2DE1F /* CreditMix */,
 				ED99CE0A289A54D500A2DE1F /* Products */,
+				ED24514528AA30A8007C3FF1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -440,8 +452,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				ED47C74C28AA08E700CA1C71 /* es */,
-				ED47C74E28AA08EC00CA1C71 /* en */,
 				ED47C74F28AA096800CA1C71 /* vi */,
+				ED24514E28ABABC6007C3FF1 /* en */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";

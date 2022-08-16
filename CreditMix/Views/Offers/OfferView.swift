@@ -88,7 +88,7 @@ struct OfferView: View {
 struct OfferView_Previews: PreviewProvider {
     static var previews: some View {
         OfferView()
-            .environment(\.locale, .init(identifier: "es"))
+            .environment(\.locale, .init(identifier: "vi"))
     }
 }
 

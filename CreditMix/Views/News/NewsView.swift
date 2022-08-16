@@ -6,20 +6,19 @@
 //
 
 import SwiftUI
-
+import CloudKit
 
 struct NewsView: View {
     
-    @State var title = "Правила досрочного погашения кредита"
-    @State var date = "24 июл. 2022 г., 21:24"
-    @State var image = "credit"
+    @State var title: String
+    @State var date: String
+    @State var image: Image
     
     var body: some View {
         
-        
         VStack(alignment: .leading, spacing: 0) {
             
-            Image(image)
+            image
                 .resizable()
                 .frame(height: 204)
                 .clipped()
@@ -49,8 +48,8 @@ struct NewsView: View {
     }
 }
 
-struct News_Previews: PreviewProvider {
-    static var previews: some View {
-        NewsView()
-    }
-}
+//struct News_Previews: PreviewProvider {
+//    static var previews: some View {
+//        NewsView()
+//    }
+//}

@@ -17,9 +17,7 @@ struct CreditMixApp: App {
             MainView()
                 .preferredColorScheme(.dark)
                 .onAppear {
-//                    UIFont.familyNames.forEach{ familyName in
-//                        print(familyName, UIFont.fontNames(forFamilyName: familyName))
-//                    }
+                    print(Locale.current.regionCode ?? "US")
                 }
         }
     }

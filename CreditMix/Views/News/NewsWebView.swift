@@ -10,7 +10,7 @@ import SwiftUI
 import WebKit
 
 struct NewsWebView: UIViewRepresentable {
-
+    
     let url: URL?
     
     func makeUIView(context: Context) -> WKWebView {
@@ -18,10 +18,16 @@ struct NewsWebView: UIViewRepresentable {
         view.scrollView.contentInsetAdjustmentBehavior = .never
         return view
     }
+    
     func updateUIView(_ uiView: WKWebView, context: Context) {
+        
         if let url = url {
             let request = URLRequest(url: url)
             uiView.load(request)
+            print(url)
+        } else {
+            print(url)
+            print("URL is corrupted")
         }
     }
 }

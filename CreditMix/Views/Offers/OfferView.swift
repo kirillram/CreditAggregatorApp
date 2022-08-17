@@ -62,9 +62,12 @@ struct OfferView: View {
                                 .frame(height: 24)
                                 .font(.custom("GolosText-Regular", size: 16))
                                 .opacity(ofvModel.orange ? 1 : 0.8)
-                            Text(ofvModel.offerSum)
-                                .frame(height: 24)
-                                .font(.custom("GolosText-Regular", size: 20))
+                            HStack {
+                                Text(ofvModel.offerSum)
+                                Text(ofvModel.currency)
+                            }
+                            .frame(height: 24)
+                            .font(.custom("GolosText-Regular", size: 20))
                         }
                         .frame(maxWidth: geo.size.width/2, alignment: .leading)
                         .foregroundColor(ofvModel.orange ? .white : Color("black"))

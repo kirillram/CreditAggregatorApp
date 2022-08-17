@@ -49,12 +49,6 @@ struct NewsDetailView: View {
             }
             .padding(20)
         }
-        
         .preferredColorScheme(.light)
-    }
-}
-struct NewsDetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        NewsDetailView()
     }
 }

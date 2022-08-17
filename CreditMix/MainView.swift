@@ -10,6 +10,7 @@ import SwiftUI
 struct MainView: View {
     
     @State var selectedTab: Int = 2
+    @StateObject var nvm = NewsViewModel()
     
     var body: some View {
         
@@ -23,7 +24,7 @@ struct MainView: View {
                 } else if selectedTab == 1 {
                     OffersPageView()
                 } else if selectedTab == 2 {
-                    NewsPageView()
+                    NewsPageView(nvm: nvm)
                 }
             }
             .zIndex(0)
@@ -34,6 +35,9 @@ struct MainView: View {
             BottomView(selectedIndex: $selectedTab)
                 .ignoresSafeArea(.all, edges: .bottom)
                 .zIndex(1)
+        }
+        .onAppear {
+            nvm.loadNews()
         }
     }
 }

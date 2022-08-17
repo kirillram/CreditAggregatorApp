@@ -12,9 +12,7 @@ struct NewsPageView: View {
     
     @State var showDetailView = false
     
-    @StateObject var nvm = NewsViewModel()
-    
-    let url = Bundle.main.url(forResource: "News Example/index", withExtension: "html")
+    @StateObject var nvm: NewsViewModel
     
     var body: some View {
         
@@ -26,13 +24,10 @@ struct NewsPageView: View {
                     NewsView(title: news.title, date: news.date, image: news.image)
                 }
                 .fullScreenCover(isPresented: $showDetailView) {
-                    NewsDetailView(url: news.webPage)
+                    NewsDetailView(url: news.url)
                 }
                 .buttonStyle(MenuButtonsStyle())
             }
-        }
-        .onAppear {
-            nvm.loadNews()
         }
         .padding(.top, 84)
         .padding(.bottom, 94)
@@ -41,9 +36,7 @@ struct NewsPageView: View {
 
 struct NewsPageView_Previews: PreviewProvider {
     static var previews: some View {
-        let url = Bundle.main.url(forResource: "News Example/index", withExtension: "html")
-//        NewsWebView(url: url)
         MainView()
-            .environment(\.locale, .init(identifier: "es"))
+            .environment(\.locale, .init(identifier: "en"))
     }
 }

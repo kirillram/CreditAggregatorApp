@@ -14,6 +14,6 @@ struct News {
     let recordId: CKRecord.ID?
     let title: String
     let date: String
-    let webPage: URL?
+    let url: URL?
     let image: Image
 }

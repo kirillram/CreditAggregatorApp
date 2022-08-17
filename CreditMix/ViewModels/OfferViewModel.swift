@@ -9,7 +9,8 @@ import Foundation
 
 final class OfferViewModel: ObservableObject {
     
-    @Published var offerSum = "50000 MXN"
+    @Published var offerSum = "50000"
+    @Published var currency = "MX"
     @Published var allowedAge = "18"
     @Published var orange = Bool.random()
     

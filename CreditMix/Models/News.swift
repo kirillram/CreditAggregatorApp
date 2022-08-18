@@ -12,7 +12,7 @@ import SwiftUI
 struct News {
     let title: String
     let date: String
-    let url: URL?
     let image: Image
     let order: Int
+    let url: URL?
 }

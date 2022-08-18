@@ -15,7 +15,7 @@ struct NewsPageView: View {
     var body: some View {
         
         VStack {
-            ForEach(nvm.newsArray.sorted { $0.order < $1.order }, id: \.date) { news in
+            ForEach(nvm.newsArray.sorted { $0.order < $1.order }.reversed(), id: \.order) { news in
                 Button {
                     nvm.currentDetailUrl = news.url
                     nvm.showDetailView.toggle()

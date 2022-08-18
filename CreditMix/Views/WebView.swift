@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 import WebKit
 
-struct NewsWebView: UIViewRepresentable {
+struct WebView: UIViewRepresentable {
     
     let url: URL?
     
@@ -20,14 +20,12 @@ struct NewsWebView: UIViewRepresentable {
     }
     
     func updateUIView(_ uiView: WKWebView, context: Context) {
-        
         if let url = url {
             let request = URLRequest(url: url)
             uiView.load(request)
             print(url)
         } else {
-            print(url)
-            print("URL is corrupted")
+            print("URL is corrupted, it's nil")
         }
     }
 }

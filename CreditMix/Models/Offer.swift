@@ -6,10 +6,14 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct Offer {
-    let offerSum: String
+    let offerSum: Int
     let currency: String
-    let allowedAge: String
+    let allowedAge: Int
     let orange: Bool
+    let logo: Image
+    let url: URL
+    let order: Int
 }

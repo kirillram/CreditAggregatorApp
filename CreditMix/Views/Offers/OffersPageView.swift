@@ -10,17 +10,23 @@ import CloudKit
 
 struct OffersPageView: View {
     
+    @StateObject var ovm: OfferViewModel
+    
     var body: some View {
         
         VStack {
-        ForEach(1..<7) { _ in
-            Button {
-                
-            } label: {
-                OfferView()
+            ForEach(ovm.offersArray.sorted { $0.order < $1.order }, id: \.order) { offer in
+                Button {
+                    ovm.currentDetailUrl = offer.url
+                    ovm.showDetailView.toggle()
+                } label: {
+                    OfferView(orange: offer.orange, offerSum: offer.offerSum, currency: offer.currency, allowedAge: offer.allowedAge, logo: offer.logo)
+                }
+                .fullScreenCover(isPresented: $ovm.showDetailView) {
+                    DetailView(url: ovm.currentDetailUrl)
+                }
+                .buttonStyle(MenuButtonsStyle())
             }
-            .buttonStyle(MenuButtonsStyle())
-        }
         }
         .padding(.top, 84)
         .padding(.bottom, 94)

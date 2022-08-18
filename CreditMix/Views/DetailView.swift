@@ -1,5 +1,5 @@
 //
-//  NewsDetailView.swift
+//  DetailView.swift
 //  CreditMix
 //
 //  Created by Кирилл on 05.08.2022.
@@ -8,21 +8,15 @@
 import SwiftUI
 import UIKit
 
-struct NewsDetailView: View {
+struct DetailView: View {
     
-    @Environment(\.presentationMode) var presentationMode
+    @Environment(\.dismiss) var dismiss
     
-    @State var showDetailView = false
-    @State var size = CGSize()
     @State var url: URL?
-//    let url = URL(string: "https://buolnd.com/Fv0k")
-//    let url = Bundle.main.url(forResource: "News Example/index", withExtension: "html")
-    
     
     var body: some View {
         ZStack {
-                NewsWebView(url: url)
-                    .ignoresSafeArea()
+            WebView(url: url)
 //                VStack {
 //                    ForEach(1..<3) { _ in
 //                        Button {
@@ -31,7 +25,7 @@ struct NewsDetailView: View {
 //                            NewsView()
 //                        }
 //                        .fullScreenCover(isPresented: $showDetailView) {
-//                            NewsDetailView()
+//                            DetailView()
 //                        }
 //                        .buttonStyle(MenuButtonsStyle())
 //                    }
@@ -39,7 +33,7 @@ struct NewsDetailView: View {
             
             GeometryReader { geo in
                 Button {
-                    presentationMode.wrappedValue.dismiss()
+                    dismiss()
                 } label: {
                     Image("back button")
                         .resizable()

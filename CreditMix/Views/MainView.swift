@@ -9,8 +9,10 @@ import SwiftUI
 
 struct MainView: View {
     
-    @State var selectedTab: Int = 2
+    @State var selectedTab: Int = 1
+    
     @StateObject var nvm = NewsViewModel()
+    @StateObject var ovm = OfferViewModel()
     
     var body: some View {
         
@@ -22,7 +24,7 @@ struct MainView: View {
                 if selectedTab == 0 {
                     FaqPageView()
                 } else if selectedTab == 1 {
-                    OffersPageView()
+                    OffersPageView(ovm: ovm)
                 } else if selectedTab == 2 {
                     NewsPageView(nvm: nvm)
                 }
@@ -38,6 +40,7 @@ struct MainView: View {
         }
         .onAppear {
             nvm.loadNews()
+            ovm.loadOffers()
         }
     }
 }
@@ -49,15 +52,15 @@ struct Main_Previews: PreviewProvider {
         
         MainView()
             .environment(\.locale, .init(identifier: "en"))
-//            .previewLayout(.sizeThatFits)
-//            .previewDevice("iPhone Xs")
+        //            .previewLayout(.sizeThatFits)
+        //            .previewDevice("iPhone Xs")
         //            .previewDevice("iPhone 6s")
         //            .previewDevice("iPhone 6s Plus")
         //            .previewDevice("iPhone 7")
         //            .previewDevice("iPhone 7 Plus")
         //            .previewDevice("iPhone 8")
         //            .previewDevice("iPhone 8 Plus")
-                    .previewDevice("iPhone 11")
+            .previewDevice("iPhone 11")
         //            .previewDevice("iPhone 11 Pro")
         //            .previewDevice("iPhone 11 Pro Max")
         //            .previewDevice("iPhone 12")

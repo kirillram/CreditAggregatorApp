@@ -10,10 +10,9 @@ import CloudKit
 import SwiftUI
 
 struct News {
-    
-    let recordId: CKRecord.ID?
     let title: String
     let date: String
     let url: URL?
     let image: Image
+    let order: Int
 }

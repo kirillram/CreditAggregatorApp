@@ -10,21 +10,20 @@ import CloudKit
 
 struct NewsPageView: View {
     
-    @State var showDetailView = false
-    
-    @StateObject var nvm: NewsViewModel
+    @StateObject var nvm = NewsViewModel()
     
     var body: some View {
         
         VStack {
-            ForEach(nvm.newsArray, id: \.recordId) { news in
+            ForEach(nvm.newsArray.sorted { $0.order < $1.order }, id: \.date) { news in
                 Button {
-                    showDetailView.toggle()
+                    nvm.currentDetailUrl = news.url
+                    nvm.showDetailView.toggle()
                 } label: {
                     NewsView(title: news.title, date: news.date, image: news.image)
                 }
-                .fullScreenCover(isPresented: $showDetailView) {
-                    NewsDetailView(url: news.url)
+                .fullScreenCover(isPresented: $nvm.showDetailView)  {
+                    DetailView(url: nvm.currentDetailUrl)
                 }
                 .buttonStyle(MenuButtonsStyle())
             }
@@ -37,6 +36,6 @@ struct NewsPageView: View {
 struct NewsPageView_Previews: PreviewProvider {
     static var previews: some View {
         MainView()
-            .environment(\.locale, .init(identifier: "en"))
+            .environment(\.locale, .init(identifier: "MX"))
     }
 }

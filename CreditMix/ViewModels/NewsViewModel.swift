@@ -12,9 +12,11 @@ import UIKit
 
 final class NewsViewModel: ObservableObject {
     
+    @Published var showDetailView = false
     @Published var title = ""
     @Published var date = Date()
     @Published var newsArray = [News]()
+    @Published var currentDetailUrl: URL?
     
     func loadNews() {
         
@@ -35,17 +37,33 @@ final class NewsViewModel: ObservableObject {
                         if record.value(forKey: "region") as? String == Locale.current.regionCode ?? "US" {
                             
                             DispatchQueue.main.async {
+                                
+                                //MARK: - Title
+                                
+                                guard let title = record["title"] as? String else { print("Didn't get title"); return }
+                                
+                                //MARK: - Date
+                                
+                                guard let date = (record.creationDate)?.formatted(date: .long, time: .shortened).description else { print("Didn't get date"); return }
+                                
+                                //MARK: - URL
+                                guard let urlString = record["url"] as? String else {print("Bad URL String"); return }
+                                guard let url = URL(string: urlString) else {print("Bad URL"); return }
+                                
                                 //MARK: - Image
                                 guard let asset = record["image"] as? CKAsset else { return }
                                 guard let assetURL = asset.fileURL else { print("Couldn't get URL for image"); return }
                                 guard let imageData = try? Data(contentsOf: assetURL) else { print("Couldn't get data for image"); return }
                                 guard let image = UIImage(data: imageData) else { print("no data"); return }
                                 
-                                let news = News(recordId: record.recordID, title: record["title"] as! String, date: (record.creationDate)?.formatted(date: .long, time: .shortened).description ?? "" , url: URL(string: record["url"] as! String), image: Image(uiImage: image))
+                                //MARK: - Order
+                                
+                                guard let order = record["order"] as? Int else { print("Didn't get order number"); return }
+                                
+                                
+                                let news = News(title: title, date: date , url: url, image: Image(uiImage: image), order: order)
                                 
                                 self.newsArray.append(news)
-                                print(news.url ?? "nothing")
-                                
                             }
                         }
                         
@@ -57,41 +75,8 @@ final class NewsViewModel: ObservableObject {
                 print("Didn't load up container because off: \(error)")
             }
         }
-    }
-    
-    func getURLsForWebPage(_ assets: [CKAsset]) -> [URL] {
-        var urls = [URL]()
         
-        for asset in assets {
-            guard let assetURL = asset.fileURL else { fatalError("Couldn't get URL for Index\(asset)")}
-            urls.append(assetURL)
-        }
-        return urls
     }
     
-    func getDataForWebPage(_ assets: [CKAsset]) -> [Data] {
-        var data = [Data]()
-        
-        for asset in assets {
-            
-            guard let assetURL = asset.fileURL else { fatalError("Couldn't get URL for Index\(asset)")}
-            guard let assetData = try? Data(contentsOf: assetURL) else { fatalError("Couldn't get data for webPage")}
-            data.append(assetData)
-            
-        }
-        return data
-    }
-    
-    private func copyBundleResourceToTemporaryDirectory(url: URL)
-    {
-       let tempDirectoryURL = URL(fileURLWithPath: NSTemporaryDirectory(), isDirectory: true)
-       
-       do {
-           try FileManager.default.removeItem(at: tempDirectoryURL)
-           try FileManager.default.copyItem(at: url, to: tempDirectoryURL)
-       } catch let error {
-           print("Unable to copy file: \(error)")
-       }
-    }
 }
 

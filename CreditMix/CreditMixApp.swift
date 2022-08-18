@@ -11,7 +11,6 @@ import CloudKit
 @main
 struct CreditMixApp: App {
     
-    
     var body: some Scene {
         WindowGroup {
             MainView()

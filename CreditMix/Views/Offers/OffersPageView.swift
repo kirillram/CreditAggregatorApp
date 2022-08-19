@@ -16,16 +16,16 @@ struct OffersPageView: View {
         
         VStack {
             ForEach(ovm.offersArray.sorted { $0.order < $1.order }, id: \.order) { offer in
-                Button {
-                    ovm.currentDetailUrl = offer.url
-                    ovm.showDetailView.toggle()
-                } label: {
-                    OfferView(orange: offer.orange, offerSum: offer.offerSum, currency: offer.currency, allowedAge: offer.allowedAge, logo: offer.logo)
-                }
-                .fullScreenCover(isPresented: $ovm.showDetailView) {
-                    DetailView(url: ovm.currentDetailUrl)
-                }
-                .buttonStyle(MenuButtonsStyle())
+                    Button {
+                        ovm.currentDetailUrl = offer.url
+                        ovm.showDetailView.toggle()
+                    } label: {
+                        OfferView(orange: offer.orange, offerSum: offer.offerSum, currency: offer.currency, allowedAge: offer.allowedAge, logo: offer.logo)
+                    }
+                    .fullScreenCover(isPresented: $ovm.showDetailView) {
+                            OfferDetailView(url: ovm.currentDetailUrl)
+                    }
+                    .buttonStyle(MenuButtonsStyle())
             }
         }
         .padding(.top, 84)

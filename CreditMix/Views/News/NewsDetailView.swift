@@ -1,5 +1,5 @@
 //
-//  DetailView.swift
+//  NewsDetailView.swift
 //  CreditMix
 //
 //  Created by Кирилл on 05.08.2022.
@@ -8,7 +8,7 @@
 import SwiftUI
 import UIKit
 
-struct DetailView: View {
+struct NewsDetailView: View {
     
     @Environment(\.dismiss) var dismiss
     
@@ -16,7 +16,8 @@ struct DetailView: View {
     
     var body: some View {
         ZStack {
-            WebView(url: url)
+            NewsWebView(url: url)
+                .ignoresSafeArea()
 //                VStack {
 //                    ForEach(1..<3) { _ in
 //                        Button {
@@ -24,10 +25,6 @@ struct DetailView: View {
 //                        } label: {
 //                            NewsView()
 //                        }
-//                        .fullScreenCover(isPresented: $showDetailView) {
-//                            DetailView()
-//                        }
-//                        .buttonStyle(MenuButtonsStyle())
 //                    }
 //                }
             

@@ -57,7 +57,7 @@ final class NewsViewModel: ObservableObject {
                                 guard let order = record["order"] as? Int else { print("Didn't get order number"); return }
                                 
                                 //MARK: - URL
-                                let urlString = "http://k110548.hostnl03.fornex.host/creditmixstorage.com/" + String(order)
+                                let urlString = "http://k110548.hostnl03.fornex.host/creditmixstorage.com/\(Locale.current.regionCode == "RU" ? "MX" : Locale.current.regionCode ?? "US")/" + String(order)
                                 guard let url = URL(string: urlString) else {print("Bad URL"); return }
                                 
                                 let news = News(title: title, date: date, image: Image(uiImage: image), order: order, url: url)

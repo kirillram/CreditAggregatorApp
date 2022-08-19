@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 import WebKit
 
-struct WebView: UIViewRepresentable {
+struct NewsWebView: UIViewRepresentable {
     
     let url: URL?
     

@@ -23,7 +23,7 @@ struct NewsPageView: View {
                     NewsView(title: news.title, date: news.date, image: news.image)
                 }
                 .fullScreenCover(isPresented: $nvm.showDetailView)  {
-                    DetailView(url: nvm.currentDetailUrl)
+                    NewsDetailView(url: nvm.currentDetailUrl)
                 }
                 .buttonStyle(MenuButtonsStyle())
             }

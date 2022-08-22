@@ -13,12 +13,22 @@ struct FaqPageView: View {
     
     var body: some View {
         VStack {
-            ForEach(qvModel.faqQuestions, id: \.self) { item in
-                QuestionView(question: item.question, answer: item.answer)
+            ScrollView {
+                
+                //MARK: - Padding top
+                HStack {}
+                    .frame(height: 84)
+                
+                //MARK: - FAQ
+                ForEach(qvModel.faqQuestions, id: \.self) { item in
+                    QuestionView(question: item.question, answer: item.answer)
+                }
+                
+                //MARK: - Padding bottom
+                HStack {}
+                    .frame(height: 94)
             }
         }
-        .padding(.top, 84)
-        .padding(.bottom, 94)
     }
 }
 

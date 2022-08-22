@@ -19,8 +19,7 @@ struct MainView: View {
         ZStack {
             Color("background")
             
-            ScrollView(showsIndicators: true) {
-                
+            VStack {
                 if selectedTab == 0 {
                     FaqPageView()
                 } else if selectedTab == 1 {
@@ -32,15 +31,16 @@ struct MainView: View {
             .zIndex(0)
             .ignoresSafeArea(.all, edges: .bottom)
             
-            TopView(selectedIndex: $selectedTab)
+            TopView(selectedIndexTitle: $selectedTab)
                 .zIndex(1)
+            
             BottomView(selectedIndex: $selectedTab)
                 .ignoresSafeArea(.all, edges: .bottom)
                 .zIndex(1)
         }
         .onAppear {
-            nvm.loadNews()
-            ovm.loadOffers()
+            nvm.loadNewsFromCloud()
+            ovm.loadOffersFromCloud()
         }
     }
 }

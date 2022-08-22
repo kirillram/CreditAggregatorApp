@@ -14,22 +14,49 @@ struct OffersPageView: View {
     
     var body: some View {
         
-        VStack {
-            ForEach(ovm.offersArray.sorted { $0.order < $1.order }, id: \.order) { offer in
-                    Button {
-                        ovm.currentDetailUrl = offer.url
-                        ovm.showDetailView.toggle()
-                    } label: {
-                        OfferView(orange: offer.orange, offerSum: offer.offerSum, currency: offer.currency, allowedAge: offer.allowedAge, logo: offer.logo)
-                    }
-                    .fullScreenCover(isPresented: $ovm.showDetailView) {
-                            OfferDetailView(url: ovm.currentDetailUrl)
-                    }
-                    .buttonStyle(MenuButtonsStyle())
+        List {
+            //MARK: - //MARK: - Padding top
+            HStack(alignment: .center) {
+                Spacer()
+                ProgressView()
+                    .frame(alignment: .center)
+                    .tint(.black)
+                Spacer()
             }
+                .listRowInsets(EdgeInsets())
+                .listRowBackground(Color.clear)
+                .listRowSeparatorTint(Color.clear, edges: .all)
+                .frame(height: 84)
+            
+            //MARK: - Offers
+            ForEach(ovm.offersArray.sorted { $0.order < $1.order }, id: \.order) { offer in
+                Button {
+                    ovm.url = offer.url
+                    ovm.showDetailView.toggle()
+                } label: {
+                    OfferView(orange: offer.orange, offerSum: offer.offerSum, currency: offer.currency, allowedAge: offer.allowedAge, logo: offer.logo)
+                }
+                .fullScreenCover(isPresented: $ovm.showDetailView) {
+                    OfferDetailView(ovm: ovm)
+                }
+                .buttonStyle(MenuButtonsStyle())
+                .padding(0)
+            }
+            .listRowInsets(EdgeInsets())
+            .listRowBackground(Color.clear)
+            .listRowSeparatorTint(Color.clear, edges: .all)
+            
+            //MARK: - Padding bottom
+            HStack {}
+                .listRowInsets(EdgeInsets())
+                .listRowBackground(Color.clear)
+                .listRowSeparatorTint(Color.clear, edges: .all)
+                .frame(height: 94)
         }
-        .padding(.top, 84)
-        .padding(.bottom, 94)
+        .refreshable {
+            ovm.loadOffersFromCloud()
+        }
+        .listStyle(.plain)
     }
 }
 

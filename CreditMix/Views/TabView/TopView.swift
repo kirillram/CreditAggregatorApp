@@ -10,7 +10,7 @@ import SwiftUI
 
 struct TopView: View {
     
-    @Binding var selectedIndex: Int
+    @Binding var selectedIndexTitle: Int
     
     let tabbarItems =  [
         TabItem(image: "faq", selectedImage: "faq.filled", title: "FAQ"),
@@ -19,9 +19,9 @@ struct TopView: View {
     
     var body: some View {
         
-        VStack {
+        VStack(spacing:0) {
             HStack {
-                Text(tabbarItems[selectedIndex].title)
+                Text(tabbarItems[selectedIndexTitle].title)
                     .font(.custom("Manrope-Bold", size: 28))
                     .foregroundColor(.white)
                     .padding(.horizontal)

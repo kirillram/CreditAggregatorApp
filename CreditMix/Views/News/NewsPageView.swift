@@ -14,7 +14,22 @@ struct NewsPageView: View {
     
     var body: some View {
         
-        VStack {
+        List {
+            
+            //MARK: - //MARK: - Padding top
+            HStack(alignment: .center) {
+                Spacer()
+                ProgressView()
+                    .frame(alignment: .center)
+                    .tint(.black)
+                Spacer()
+            }
+                .listRowInsets(EdgeInsets())
+                .listRowBackground(Color.clear)
+                .listRowSeparatorTint(Color.clear, edges: .all)
+                .frame(height: 84)
+            
+            //MARK: - News
             ForEach(nvm.newsArray.sorted { $0.order < $1.order }.reversed(), id: \.order) { news in
                 Button {
                     nvm.currentDetailUrl = news.url
@@ -27,9 +42,21 @@ struct NewsPageView: View {
                 }
                 .buttonStyle(MenuButtonsStyle())
             }
+            .listRowInsets(EdgeInsets())
+            .listRowBackground(Color.clear)
+            .listRowSeparatorTint(Color.clear, edges: .all)
+            
+            //MARK: - Padding bottom
+            HStack {}
+                .listRowInsets(EdgeInsets())
+                .listRowBackground(Color.clear)
+                .listRowSeparatorTint(Color.clear, edges: .all)
+                .frame(height: 94)
         }
-        .padding(.top, 84)
-        .padding(.bottom, 94)
+        .refreshable {
+            nvm.loadNewsFromCloud()
+        }
+        .listStyle(.plain)
     }
 }
 

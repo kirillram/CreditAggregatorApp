@@ -18,7 +18,9 @@ final class NewsViewModel: ObservableObject {
     @Published var newsArray = [News]()
     @Published var currentDetailUrl: URL?
     
-    func loadNews() {
+    func loadNewsFromCloud() {
+        
+        newsArray = []
         
         let pdb = CKContainer.init(identifier: "iCloud.com.KirillRam.CreditMix.main").database(with: .public)
         let predicate = NSPredicate(value: true)

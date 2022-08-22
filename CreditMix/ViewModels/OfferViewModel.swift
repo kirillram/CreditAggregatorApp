@@ -11,23 +11,36 @@ import CloudKit
 
 final class OfferViewModel: ObservableObject {
     
-    
     @Published var orange = Bool.random()
     @Published var offersArray = [Offer]()
     @Published var showDetailView = false
-    @Published var currentDetailUrl: URL?
+    @Published var url: URL?
+    @Published var progress = 0.0
     
-    func getCurrency() -> String {
+    //MARK: - WebView
+    @Published var canGoBack = false
+    @Published var canGoForward = false
+    @Published var shouldGoBack = false
+    @Published var shouldGoForward = false
+    
+    func getCurrentRegionCurrency() -> String {
         
         let currentRegion = Locale.current.regionCode ?? "US"
         if currentRegion == "MX" {
             return "$"
         } else {
-            return "USD"
+            return "$"
         }
     }
     
-    func loadOffers() {
+    enum State {
+        case loading
+        case loaded([Offer])
+    }
+    
+    func loadOffersFromCloud() {
+        
+        offersArray = []
         
         let pdb = CKContainer.init(identifier: "iCloud.com.KirillRam.CreditMix.main").database(with: .public)
         let predicate = NSPredicate(value: true)
@@ -65,7 +78,7 @@ final class OfferViewModel: ObservableObject {
                                 //MARK: - Order
                                 guard let order = record["order"] as? Int else { print("No order number"); return }
                                 
-                                let offer = Offer(offerSum: offerSum, currency: self.getCurrency(), allowedAge: allowedAge, orange: order < 6 ? true : false, logo: Image(uiImage: logo), url: url, order: order)
+                                let offer = Offer(offerSum: offerSum, currency: self.getCurrentRegionCurrency(), allowedAge: allowedAge, orange: order < 6 ? true : false, logo: Image(uiImage: logo), url: url, order: order)
                                 
                                 self.offersArray.append(offer)
                             }

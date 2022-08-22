@@ -11,61 +11,65 @@ import WebKit
 
 struct OfferWebView: UIViewRepresentable {
     
-    let url: URL?
-    
-    @ObservedObject var progressVM: ProgressViewModel
-    
     private let webView = WKWebView(frame: CGRect(x: 0.0, y: 0.0, width: 0.1, height: 0.1))
     
+    @ObservedObject var ovm: OfferViewModel
+    
+    
     func makeCoordinator() -> Coordinator {
-        Coordinator(self, viewModel: progressVM)
+        Coordinator(self, ovm: ovm)
     }
     
     func makeUIView(context: Context) -> WKWebView {
-        webView.allowsBackForwardNavigationGestures = true
-        if let url = url {
-            let request = URLRequest(url: url)
-            webView.load(request)
-            print(url)
-        } else {
-            print("URL is corrupted, it's nil")
+        
+        guard let url = self.ovm.url else {
+            return webView
         }
         
+        let request = URLRequest(url: url)
+        webView.navigationDelegate = context.coordinator
+        webView.allowsBackForwardNavigationGestures = true
+        webView.load(request)
         return webView
     }
     
     func updateUIView(_ uiView: WKWebView, context: Context) {
         
+        if ovm.shouldGoBack {
+            uiView.goBack()
+            ovm.shouldGoBack = false
+        }
+        if ovm.shouldGoForward {
+            uiView.goForward()
+            ovm.shouldGoForward = false
+        }
     }
 }
 
 extension OfferWebView  {
     
-    class ProgressViewModel: ObservableObject {
+    class Coordinator: NSObject, WKNavigationDelegate {
         
-        @Published var progress: Double = 0.0
-        
-        init (progress: Double) {
-            self.progress = progress
-        }
-    }
-    
-    class Coordinator: NSObject {
+        @ObservedObject private var ovm: OfferViewModel
         
         private var parent: OfferWebView
-        private var progressVM: ProgressViewModel
         private var observer: NSKeyValueObservation?
         
-        init(_ parent: OfferWebView, viewModel: ProgressViewModel) {
+        init(_ parent: OfferWebView, ovm: OfferViewModel) {
             self.parent = parent
-            self.progressVM = viewModel
+            self.ovm = ovm
             
             super.init()
             
             observer = self.parent.webView.observe(\.estimatedProgress) { [weak self] webView, _ in
                 guard let self = self else { return }
-                self.parent.progressVM.progress = webView.estimatedProgress
+                self.parent.ovm.progress = webView.estimatedProgress
             }
+        }
+        
+        func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+            ovm.canGoBack = webView.canGoBack
+            ovm.canGoForward = webView.canGoForward
         }
     }
 }

@@ -23,49 +23,49 @@ struct OfferDetailView: View {
                 
                 //MARK: - WebView
                 
-                OfferWebView(ovm: ovm)
-                    .navigationBarTitleDisplayMode(.inline)
-                    .toolbar {
-                        ToolbarItem(placement: .navigationBarLeading) {
+                VStack {
+                    OfferWebView(ovm: ovm)
+                    if ovm.canGoForward || ovm.canGoBack {
+                        HStack {
                             Button {
-                                dismiss()
+                                ovm.shouldGoBack.toggle()
                             } label: {
-                                Image(systemName: "xmark")
-                                    .foregroundColor(.white)
+                                if ovm.canGoBack {
+                                    Image(systemName: "arrow.backward")
+                                }
                             }
+                            .padding(.leading, 35)
+                            
+                            Spacer()
+                            
+                            Button {
+                                ovm.shouldGoForward.toggle()
+                            } label: {
+                                if ovm.canGoForward {
+                                    Image(systemName: "arrow.forward")
+                                }
+                            }
+                            .padding(.trailing, 35)
+                        }
+                        .frame(minHeight: 30)
+                        .padding(.vertical, 10)
+                        .tint(.white)
+                        .background(Color("dark green")
+                            .ignoresSafeArea())
+                    }
+                }
+                .navigationBarTitleDisplayMode(.inline)
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        Button {
+                            dismiss()
+                        } label: {
+                            Image(systemName: "xmark")
+                                .foregroundColor(.white)
                         }
                     }
-                    .ignoresSafeArea(.all, edges: .bottom)
-                    .safeAreaInset(edge: .bottom) {
-                        if ovm.canGoForward || ovm.canGoBack {
-                            HStack {
-                                Button {
-                                    ovm.shouldGoBack.toggle()
-                                } label: {
-                                    if ovm.canGoBack {
-                                        Image(systemName: "arrow.backward")
-                                    }
-                                }
-                                .padding(.leading, 25)
-                                
-                                Spacer()
-                                
-                                Button {
-                                    ovm.shouldGoForward.toggle()
-                                } label: {
-                                    if ovm.canGoForward {
-                                        Image(systemName: "arrow.forward")
-                                    }
-                                }
-                                .padding(.trailing, 25)
-                            }
-                            .padding(.vertical, 10)
-                            .tint(.white)
-                            .background(Color("dark green")
-                                .ignoresSafeArea())
-                        }
-
-                    }
+                }
+                .ignoresSafeArea(.all, edges: .bottom)
                 
                 //MARK: - Progress Bar
                 

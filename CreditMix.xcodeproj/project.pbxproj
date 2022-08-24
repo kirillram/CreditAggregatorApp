@@ -13,6 +13,7 @@
 		ED63810428AF2C3900B856DF /* OfferDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED63810328AF2C3900B856DF /* OfferDetailView.swift */; };
 		ED63810628AF2CA400B856DF /* OfferWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED63810528AF2CA400B856DF /* OfferWebView.swift */; };
 		ED63810828AF325000B856DF /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED63810728AF325000B856DF /* LoadingView.swift */; };
+		ED6E126928B63E080042649F /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED6E126828B63E080042649F /* Launch Screen.storyboard */; };
 		ED99CE0D289A54D500A2DE1F /* CreditMixApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED99CE0C289A54D500A2DE1F /* CreditMixApp.swift */; };
 		ED99CE11289A54D600A2DE1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED99CE10289A54D600A2DE1F /* Assets.xcassets */; };
 		ED99CE14289A54D600A2DE1F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED99CE13289A54D600A2DE1F /* Preview Assets.xcassets */; };
@@ -79,6 +80,7 @@
 		ED63810328AF2C3900B856DF /* OfferDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferDetailView.swift; sourceTree = "<group>"; };
 		ED63810528AF2CA400B856DF /* OfferWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferWebView.swift; sourceTree = "<group>"; };
 		ED63810728AF325000B856DF /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		ED6E126828B63E080042649F /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		ED99CE09289A54D500A2DE1F /* CreditMix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CreditMix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED99CE0C289A54D500A2DE1F /* CreditMixApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditMixApp.swift; sourceTree = "<group>"; };
 		ED99CE10289A54D600A2DE1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 		ED99CE00289A54D500A2DE1F = {
 			isa = PBXGroup;
 			children = (
+				ED6E126828B63E080042649F /* Launch Screen.storyboard */,
 				ED99CE0B289A54D500A2DE1F /* CreditMix */,
 				ED99CE0A289A54D500A2DE1F /* Products */,
 				ED24514528AA30A8007C3FF1 /* Frameworks */,
@@ -379,6 +382,7 @@
 			files = (
 				EDB39F65289BA2FC007F85F3 /* Inter-Bold.otf in Resources */,
 				EDB39F54289BA2FC007F85F3 /* Inter-Italic.otf in Resources */,
+				ED6E126928B63E080042649F /* Launch Screen.storyboard in Resources */,
 				EDB39F61289BA2FC007F85F3 /* Inter-ExtraLight.otf in Resources */,
 				EDB39F5A289BA2FC007F85F3 /* Inter-Regular.otf in Resources */,
 				EDB39F55289BA2FC007F85F3 /* Inter-Black.otf in Resources */,
@@ -584,6 +588,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = CreditMix/CreditMix.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
@@ -595,6 +600,7 @@
 				INFOPLIST_FILE = CreditMix/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
@@ -618,6 +624,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = CreditMix/CreditMix.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
@@ -629,6 +636,7 @@
 				INFOPLIST_FILE = CreditMix/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;

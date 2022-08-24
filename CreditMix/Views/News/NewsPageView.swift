@@ -37,9 +37,6 @@ struct NewsPageView: View {
                 } label: {
                     NewsView(title: news.title, date: news.date, image: news.image)
                 }
-                .fullScreenCover(isPresented: $nvm.showDetailView)  {
-                    NewsDetailView(url: nvm.currentDetailUrl)
-                }
                 .buttonStyle(MenuButtonsStyle())
             }
             .listRowInsets(EdgeInsets())
@@ -52,6 +49,9 @@ struct NewsPageView: View {
                 .listRowBackground(Color.clear)
                 .listRowSeparatorTint(Color.clear, edges: .all)
                 .frame(height: 94)
+        }
+        .fullScreenCover(isPresented: $nvm.showDetailView)  {
+            NewsDetailView(url: nvm.currentDetailUrl)
         }
         .refreshable {
             nvm.loadNewsFromCloud()

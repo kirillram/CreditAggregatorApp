@@ -23,7 +23,6 @@ struct NewsWebView: UIViewRepresentable {
         if let url = url {
             let request = URLRequest(url: url)
             uiView.load(request)
-            print(url)
         } else {
             print("URL is corrupted, it's nil")
         }

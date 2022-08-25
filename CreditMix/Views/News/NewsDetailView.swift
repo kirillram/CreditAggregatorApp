@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import UIKit
 
 struct NewsDetailView: View {
     
@@ -18,15 +17,6 @@ struct NewsDetailView: View {
         ZStack {
             NewsWebView(url: url)
                 .ignoresSafeArea()
-//                VStack {
-//                    ForEach(1..<3) { _ in
-//                        Button {
-//                            showDetailView.toggle()
-//                        } label: {
-//                            NewsView()
-//                        }
-//                    }
-//                }
             
             GeometryReader { geo in
                 Button {

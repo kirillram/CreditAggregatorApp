@@ -56,7 +56,7 @@ final class OfferViewModel: ObservableObject {
                     switch $0 {
                     case .success(let record):
                         
-                        if record.value(forKey: "region") as? String == Locale.current.regionCode ?? "US" || Locale.current.regionCode == "RU" {
+//                        if record.value(forKey: "region") as? String == Locale.current.regionCode ?? "US" || Locale.current.regionCode == "RU" {
                             
                             DispatchQueue.main.async {
                                 //MARK: - Image
@@ -82,7 +82,7 @@ final class OfferViewModel: ObservableObject {
                                 
                                 self.offersArray.append(offer)
                             }
-                        }
+//                        }
                         
                     case .failure(let error):
                         print(error)

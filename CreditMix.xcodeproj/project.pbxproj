@@ -162,7 +162,6 @@
 		ED99CE00289A54D500A2DE1F = {
 			isa = PBXGroup;
 			children = (
-				ED6E126828B63E080042649F /* Launch Screen.storyboard */,
 				ED99CE0B289A54D500A2DE1F /* CreditMix */,
 				ED99CE0A289A54D500A2DE1F /* Products */,
 				ED24514528AA30A8007C3FF1 /* Frameworks */,
@@ -180,6 +179,7 @@
 		ED99CE0B289A54D500A2DE1F /* CreditMix */ = {
 			isa = PBXGroup;
 			children = (
+				ED6E126828B63E080042649F /* Launch Screen.storyboard */,
 				ED47C74228AA04ED00CA1C71 /* CreditMix.entitlements */,
 				ED99CE0C289A54D500A2DE1F /* CreditMixApp.swift */,
 				EDB39F6A289BA41A007F85F3 /* Info.plist */,

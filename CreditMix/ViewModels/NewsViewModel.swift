@@ -36,7 +36,7 @@ final class NewsViewModel: ObservableObject {
                     switch $0 {
                     case .success(let record):
                         
-                        if record.value(forKey: "region") as? String == Locale.current.regionCode ?? "US" || Locale.current.regionCode == "RU" {
+//                        if record.value(forKey: "region") as? String == Locale.current.regionCode ?? "MX" || Locale.current.regionCode == "RU" {
                             
                             DispatchQueue.main.async {
                                 
@@ -59,14 +59,14 @@ final class NewsViewModel: ObservableObject {
                                 guard let order = record["order"] as? Int else { print("Didn't get order number"); return }
                                 
                                 //MARK: - URL
-                                let urlString = "https://kirillram.github.io/creditmix/\(Locale.current.regionCode == "RU" ? "MX" : Locale.current.regionCode ?? "US")/" + order.description
+                                let urlString = "https://kirillram.github.io/creditmix/MX/\(order)/"
                                 guard let url = URL(string: urlString) else {print("Bad URL"); return }
                                 
                                 let news = News(title: title, date: date, image: Image(uiImage: image), order: order, url: url)
                                 
                                 self.newsArray.append(news)
                             }
-                        }
+//                        }
                         
                     case .failure(let error):
                         print(error)

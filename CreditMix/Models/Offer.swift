@@ -12,7 +12,7 @@ struct Offer {
     let offerSum: Int
     let currency: String
     let allowedAge: Int
-    let orange: Bool
+    let green: Bool
     let logo: Image
     let url: URL
     let order: Int

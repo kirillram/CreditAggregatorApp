@@ -11,7 +11,7 @@ import CloudKit
 
 final class OfferViewModel: ObservableObject {
     
-    @Published var orange = Bool.random()
+    @Published var green = Bool.random()
     @Published var offersArray = [Offer]()
     @Published var showDetailView = false
     @Published var url: URL?
@@ -31,11 +31,6 @@ final class OfferViewModel: ObservableObject {
         } else {
             return "$"
         }
-    }
-    
-    enum State {
-        case loading
-        case loaded([Offer])
     }
     
     func loadOffersFromCloud() {
@@ -78,7 +73,7 @@ final class OfferViewModel: ObservableObject {
                                 //MARK: - Order
                                 guard let order = record["order"] as? Int else { print("No order number"); return }
                                 
-                                let offer = Offer(offerSum: offerSum, currency: self.getCurrentRegionCurrency(), allowedAge: allowedAge, orange: order < 6 ? true : false, logo: Image(uiImage: logo), url: url, order: order)
+                                let offer = Offer(offerSum: offerSum, currency: self.getCurrentRegionCurrency(), allowedAge: allowedAge, green: order < 6 ? true : false, logo: Image(uiImage: logo), url: url, order: order)
                                 
                                 self.offersArray.append(offer)
                             }

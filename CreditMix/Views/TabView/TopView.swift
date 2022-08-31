@@ -29,7 +29,7 @@ struct TopView: View {
             }
             .frame(width: screenW, height: 64)
             .background(
-                Color("dark green")
+                Color(red: 0.32312, green: 0.31234, blue: 1)
                     .cornerRadius(20, corners: [.bottomLeft, .bottomRight])
                     .ignoresSafeArea()
                     .shadow(color: .white.opacity(0.1), radius: 20, x: 0, y: 4)

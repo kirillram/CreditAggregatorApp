@@ -10,9 +10,9 @@ import SwiftUI
 struct BottomView: View {
     
     let tabbarItems =  [
-        TabItem(image: "faq", selectedImage: "faq.filled", title: "FAQ"),
-        TabItem(image: "offers", selectedImage: "offers.filled", title: "Offers"),
-        TabItem(image: "news", selectedImage: "news.filled", title: "News")]
+        TabItem(image: "faq", selectedImage: "faq.fill", title: "FAQ"),
+        TabItem(image: "offers", selectedImage: "offers.fill" , title: "Offers"),
+        TabItem(image: "news", selectedImage: "news.fill", title: "News")]
     
     
     @Binding var selectedIndex: Int

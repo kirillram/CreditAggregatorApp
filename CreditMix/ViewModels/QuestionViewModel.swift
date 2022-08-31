@@ -21,11 +21,17 @@ class QuestionViewModel: ObservableObject {
     ]
     
     func chooseBorderColor() -> Color {
-        return opened ? Color("orange") : Color("border").opacity(0.08)
+        return opened ? Color("dark green") : Color("border").opacity(0.08)
     }
     
     func rotateButton() -> Angle {
         return opened ? Angle.degrees(0) : Angle.degrees(180)
     }
     
+}
+
+struct MyPreviewProvider_Previews: PreviewProvider {
+    static var previews: some View {
+        FaqPageView()
+    }
 }

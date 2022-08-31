@@ -31,7 +31,7 @@
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Bcu-3y-fUS"/>
-                        <color key="backgroundColor" name="dark green"/>
+                        <color key="backgroundColor" name="new"/>
                         <constraints>
                             <constraint firstItem="Bcu-3y-fUS" firstAttribute="centerX" secondItem="obG-Y5-kRd" secondAttribute="centerX" id="5cz-MP-9tL"/>
                             <constraint firstItem="Uke-XB-qZv" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="8bt-6D-1Up"/>
@@ -48,8 +48,8 @@
     </scenes>
     <resources>
         <image name="logo" width="100" height="100"/>
-        <namedColor name="dark green">
-            <color red="0.066666666666666666" green="0.53333333333333333" blue="0.39215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="new">
+            <color red="0.32156862745098042" green="0.31372549019607843" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

@@ -16,23 +16,24 @@ struct TabItemView: View {
     var body: some View {
         
         VStack(spacing: 4) {
-            if item.image == "offers" && item.selectedImage == "offers.filled" {
-                    Image(isSelected ? item.selectedImage : item.image)
-                        .resizable()
-                        .offset(y: -10)
-                        .frame(width: 48, height: 48)
+            if item.title == "Offers" {
+                Image(isSelected ? item.selectedImage : item.image)
+                    .resizable()
+                    .offset(y: -10)
+                    .frame(width: 48, height: 48)
             } else {
                 VStack {
-                        Image(isSelected ? item.selectedImage : item.image)
-                            .resizable()
-                            .frame(width: 24, height: 24)
-                    }
+                    Image(isSelected ? item.selectedImage : item.image)
+                        .resizable()
+                        .foregroundColor(isSelected ? Color(red: 0.32312, green: 0.31234, blue: 1) : Color("black"))
+                        .frame(width: 20, height: 20)
+                }
                 .frame(width: 48, height: 48)
             }
             
             
             Text(item.title)
-                .foregroundColor(isSelected ? Color("dark green") : Color("black"))
+                .foregroundColor(isSelected ? Color(red: 0.32312, green: 0.31234, blue: 1) : Color("black"))
                 .font(.custom("Inter-Medium", size: 13))
         }
     }

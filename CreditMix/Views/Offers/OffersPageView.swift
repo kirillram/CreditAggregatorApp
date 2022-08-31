@@ -16,17 +16,8 @@ struct OffersPageView: View {
         
         List {
             //MARK: - //MARK: - Padding top
-            HStack(alignment: .center) {
-                Spacer()
-                ProgressView()
-                    .frame(alignment: .center)
-                    .tint(.black)
-                Spacer()
-            }
-            .listRowInsets(EdgeInsets())
-            .listRowBackground(Color.clear)
-            .listRowSeparatorTint(Color.clear, edges: .all)
-            .frame(height: 84)
+            PaddingView(withProgressView: true)
+                .frame(height: 84)
             
             //MARK: - Offers
                 ForEach(ovm.offersArray.sorted { $0.order < $1.order }, id: \.order) { offer in
@@ -34,7 +25,7 @@ struct OffersPageView: View {
                         ovm.url = offer.url
                         ovm.showDetailView.toggle()
                     } label: {
-                        OfferView(orange: offer.orange, offerSum: offer.offerSum, currency: offer.currency, allowedAge: offer.allowedAge, logo: offer.logo)
+                        OfferView(green: offer.green, offerSum: offer.offerSum, currency: offer.currency, allowedAge: offer.allowedAge, logo: offer.logo)
                     }
                     .buttonStyle(MenuButtonsStyle())
                     .padding(0)
@@ -44,10 +35,7 @@ struct OffersPageView: View {
                 .listRowSeparatorTint(Color.clear, edges: .all)
             
             //MARK: - Padding bottom
-            HStack {}
-                .listRowInsets(EdgeInsets())
-                .listRowBackground(Color.clear)
-                .listRowSeparatorTint(Color.clear, edges: .all)
+            PaddingView(withProgressView: false)
                 .frame(height: 94)
         }
         .fullScreenCover(isPresented: $ovm.showDetailView) {

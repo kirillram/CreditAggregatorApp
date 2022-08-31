@@ -17,16 +17,7 @@ struct NewsPageView: View {
         List {
             
             //MARK: - //MARK: - Padding top
-            HStack(alignment: .center) {
-                Spacer()
-                ProgressView()
-                    .frame(alignment: .center)
-                    .tint(.black)
-                Spacer()
-            }
-                .listRowInsets(EdgeInsets())
-                .listRowBackground(Color.clear)
-                .listRowSeparatorTint(Color.clear, edges: .all)
+            PaddingView(withProgressView: true)
                 .frame(height: 84)
             
             //MARK: - News
@@ -44,10 +35,7 @@ struct NewsPageView: View {
             .listRowSeparatorTint(Color.clear, edges: .all)
             
             //MARK: - Padding bottom
-            HStack {}
-                .listRowInsets(EdgeInsets())
-                .listRowBackground(Color.clear)
-                .listRowSeparatorTint(Color.clear, edges: .all)
+            PaddingView(withProgressView: false)
                 .frame(height: 94)
         }
         .fullScreenCover(isPresented: $nvm.showDetailView)  {

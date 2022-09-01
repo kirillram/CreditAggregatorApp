@@ -18,7 +18,7 @@ struct OfferDetailView: View {
         
         NavigationView {
             ZStack(alignment: .bottom) {
-                Color("green")
+                Color("blue")
                     .ignoresSafeArea()
                 
                 //MARK: - WebView
@@ -50,7 +50,7 @@ struct OfferDetailView: View {
                         .frame(minHeight: 30)
                         .padding(.vertical, 10)
                         .tint(.white)
-                        .background(Color("dark green")
+                        .background(Color("blue")
                             .ignoresSafeArea())
                     }
                 }

@@ -21,31 +21,10 @@
 		ED99CE20289A953D00A2DE1F /* BottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED99CE1F289A953D00A2DE1F /* BottomView.swift */; };
 		EDA624E328AA26400064C176 /* NewsWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA624E228AA26400064C176 /* NewsWebView.swift */; };
 		EDB39F36289BA23E007F85F3 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB39F35289BA23E007F85F3 /* Utilities.swift */; };
-		EDB39F51289BA2FC007F85F3 /* Manrope-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EDB39F38289BA2FB007F85F3 /* Manrope-Light.ttf */; };
-		EDB39F52289BA2FC007F85F3 /* Inter-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = EDB39F39289BA2FB007F85F3 /* Inter-Thin.otf */; };
-		EDB39F53289BA2FC007F85F3 /* Inter-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = EDB39F3A289BA2FB007F85F3 /* Inter-BlackItalic.otf */; };
-		EDB39F54289BA2FC007F85F3 /* Inter-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = EDB39F3B289BA2FB007F85F3 /* Inter-Italic.otf */; };
-		EDB39F55289BA2FC007F85F3 /* Inter-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = EDB39F3C289BA2FB007F85F3 /* Inter-Black.otf */; };
 		EDB39F56289BA2FC007F85F3 /* Manrope-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EDB39F3D289BA2FB007F85F3 /* Manrope-ExtraBold.ttf */; };
-		EDB39F57289BA2FC007F85F3 /* Inter-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = EDB39F3E289BA2FB007F85F3 /* Inter-LightItalic.otf */; };
-		EDB39F58289BA2FC007F85F3 /* Inter-ExtraBoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = EDB39F3F289BA2FB007F85F3 /* Inter-ExtraBoldItalic.otf */; };
 		EDB39F59289BA2FC007F85F3 /* Manrope-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EDB39F40289BA2FB007F85F3 /* Manrope-Bold.ttf */; };
 		EDB39F5A289BA2FC007F85F3 /* Inter-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = EDB39F41289BA2FB007F85F3 /* Inter-Regular.otf */; };
-		EDB39F5B289BA2FC007F85F3 /* Inter-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = EDB39F42289BA2FB007F85F3 /* Inter-SemiBold.otf */; };
-		EDB39F5C289BA2FC007F85F3 /* Inter-ThinItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = EDB39F43289BA2FB007F85F3 /* Inter-ThinItalic.otf */; };
-		EDB39F5D289BA2FC007F85F3 /* Inter-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = EDB39F44289BA2FB007F85F3 /* Inter-BoldItalic.otf */; };
-		EDB39F5E289BA2FC007F85F3 /* Inter-SemiBoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = EDB39F45289BA2FB007F85F3 /* Inter-SemiBoldItalic.otf */; };
-		EDB39F5F289BA2FC007F85F3 /* Inter-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = EDB39F46289BA2FB007F85F3 /* Inter-Light.otf */; };
-		EDB39F60289BA2FC007F85F3 /* Manrope-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EDB39F47289BA2FC007F85F3 /* Manrope-ExtraLight.ttf */; };
-		EDB39F61289BA2FC007F85F3 /* Inter-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = EDB39F48289BA2FC007F85F3 /* Inter-ExtraLight.otf */; };
-		EDB39F62289BA2FC007F85F3 /* Manrope-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EDB39F49289BA2FC007F85F3 /* Manrope-Medium.ttf */; };
-		EDB39F63289BA2FC007F85F3 /* Manrope-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EDB39F4A289BA2FC007F85F3 /* Manrope-Regular.ttf */; };
-		EDB39F64289BA2FC007F85F3 /* Manrope-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EDB39F4B289BA2FC007F85F3 /* Manrope-SemiBold.ttf */; };
-		EDB39F65289BA2FC007F85F3 /* Inter-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = EDB39F4C289BA2FC007F85F3 /* Inter-Bold.otf */; };
-		EDB39F66289BA2FC007F85F3 /* Inter-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = EDB39F4D289BA2FC007F85F3 /* Inter-MediumItalic.otf */; };
-		EDB39F67289BA2FC007F85F3 /* Inter-ExtraLightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = EDB39F4E289BA2FC007F85F3 /* Inter-ExtraLightItalic.otf */; };
 		EDB39F68289BA2FC007F85F3 /* Inter-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = EDB39F4F289BA2FC007F85F3 /* Inter-Medium.otf */; };
-		EDB39F69289BA2FC007F85F3 /* Inter-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = EDB39F50289BA2FC007F85F3 /* Inter-ExtraBold.otf */; };
 		EDB39F6C289BA7DF007F85F3 /* TabItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB39F6B289BA7DF007F85F3 /* TabItemView.swift */; };
 		EDB39F70289BB39F007F85F3 /* OfferView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB39F6F289BB39F007F85F3 /* OfferView.swift */; };
 		EDB39F76289BBB12007F85F3 /* Golos Text_Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EDB39F71289BBB12007F85F3 /* Golos Text_Black.ttf */; };
@@ -89,31 +68,10 @@
 		ED99CE1F289A953D00A2DE1F /* BottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomView.swift; sourceTree = "<group>"; };
 		EDA624E228AA26400064C176 /* NewsWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsWebView.swift; sourceTree = "<group>"; };
 		EDB39F35289BA23E007F85F3 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
-		EDB39F38289BA2FB007F85F3 /* Manrope-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-Light.ttf"; sourceTree = "<group>"; };
-		EDB39F39289BA2FB007F85F3 /* Inter-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Thin.otf"; sourceTree = "<group>"; };
-		EDB39F3A289BA2FB007F85F3 /* Inter-BlackItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-BlackItalic.otf"; sourceTree = "<group>"; };
-		EDB39F3B289BA2FB007F85F3 /* Inter-Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Italic.otf"; sourceTree = "<group>"; };
-		EDB39F3C289BA2FB007F85F3 /* Inter-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Black.otf"; sourceTree = "<group>"; };
 		EDB39F3D289BA2FB007F85F3 /* Manrope-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-ExtraBold.ttf"; sourceTree = "<group>"; };
-		EDB39F3E289BA2FB007F85F3 /* Inter-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-LightItalic.otf"; sourceTree = "<group>"; };
-		EDB39F3F289BA2FB007F85F3 /* Inter-ExtraBoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ExtraBoldItalic.otf"; sourceTree = "<group>"; };
 		EDB39F40289BA2FB007F85F3 /* Manrope-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-Bold.ttf"; sourceTree = "<group>"; };
 		EDB39F41289BA2FB007F85F3 /* Inter-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.otf"; sourceTree = "<group>"; };
-		EDB39F42289BA2FB007F85F3 /* Inter-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.otf"; sourceTree = "<group>"; };
-		EDB39F43289BA2FB007F85F3 /* Inter-ThinItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ThinItalic.otf"; sourceTree = "<group>"; };
-		EDB39F44289BA2FB007F85F3 /* Inter-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-BoldItalic.otf"; sourceTree = "<group>"; };
-		EDB39F45289BA2FB007F85F3 /* Inter-SemiBoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBoldItalic.otf"; sourceTree = "<group>"; };
-		EDB39F46289BA2FB007F85F3 /* Inter-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Light.otf"; sourceTree = "<group>"; };
-		EDB39F47289BA2FC007F85F3 /* Manrope-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-ExtraLight.ttf"; sourceTree = "<group>"; };
-		EDB39F48289BA2FC007F85F3 /* Inter-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ExtraLight.otf"; sourceTree = "<group>"; };
-		EDB39F49289BA2FC007F85F3 /* Manrope-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-Medium.ttf"; sourceTree = "<group>"; };
-		EDB39F4A289BA2FC007F85F3 /* Manrope-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-Regular.ttf"; sourceTree = "<group>"; };
-		EDB39F4B289BA2FC007F85F3 /* Manrope-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-SemiBold.ttf"; sourceTree = "<group>"; };
-		EDB39F4C289BA2FC007F85F3 /* Inter-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Bold.otf"; sourceTree = "<group>"; };
-		EDB39F4D289BA2FC007F85F3 /* Inter-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-MediumItalic.otf"; sourceTree = "<group>"; };
-		EDB39F4E289BA2FC007F85F3 /* Inter-ExtraLightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ExtraLightItalic.otf"; sourceTree = "<group>"; };
 		EDB39F4F289BA2FC007F85F3 /* Inter-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Medium.otf"; sourceTree = "<group>"; };
-		EDB39F50289BA2FC007F85F3 /* Inter-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ExtraBold.otf"; sourceTree = "<group>"; };
 		EDB39F6A289BA41A007F85F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDB39F6B289BA7DF007F85F3 /* TabItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemView.swift; sourceTree = "<group>"; };
 		EDB39F6F289BB39F007F85F3 /* OfferView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferView.swift; sourceTree = "<group>"; };
@@ -215,36 +173,15 @@
 		EDB39F37289BA2D2007F85F3 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				EDB39F3C289BA2FB007F85F3 /* Inter-Black.otf */,
-				EDB39F3A289BA2FB007F85F3 /* Inter-BlackItalic.otf */,
-				EDB39F4C289BA2FC007F85F3 /* Inter-Bold.otf */,
-				EDB39F44289BA2FB007F85F3 /* Inter-BoldItalic.otf */,
-				EDB39F50289BA2FC007F85F3 /* Inter-ExtraBold.otf */,
-				EDB39F3F289BA2FB007F85F3 /* Inter-ExtraBoldItalic.otf */,
-				EDB39F48289BA2FC007F85F3 /* Inter-ExtraLight.otf */,
-				EDB39F4E289BA2FC007F85F3 /* Inter-ExtraLightItalic.otf */,
-				EDB39F3B289BA2FB007F85F3 /* Inter-Italic.otf */,
-				EDB39F46289BA2FB007F85F3 /* Inter-Light.otf */,
-				EDB39F3E289BA2FB007F85F3 /* Inter-LightItalic.otf */,
+				EDB39F41289BA2FB007F85F3 /* Inter-Regular.otf */,
 				EDB39F4F289BA2FC007F85F3 /* Inter-Medium.otf */,
 				EDB39F71289BBB12007F85F3 /* Golos Text_Black.ttf */,
 				EDB39F73289BBB12007F85F3 /* Golos Text_Bold.ttf */,
 				EDB39F72289BBB12007F85F3 /* Golos Text_DemiBold.ttf */,
 				EDB39F74289BBB12007F85F3 /* Golos Text_Medium.ttf */,
 				EDB39F75289BBB12007F85F3 /* Golos Text_Regular.ttf */,
-				EDB39F4D289BA2FC007F85F3 /* Inter-MediumItalic.otf */,
-				EDB39F41289BA2FB007F85F3 /* Inter-Regular.otf */,
-				EDB39F42289BA2FB007F85F3 /* Inter-SemiBold.otf */,
-				EDB39F45289BA2FB007F85F3 /* Inter-SemiBoldItalic.otf */,
-				EDB39F39289BA2FB007F85F3 /* Inter-Thin.otf */,
-				EDB39F43289BA2FB007F85F3 /* Inter-ThinItalic.otf */,
 				EDB39F40289BA2FB007F85F3 /* Manrope-Bold.ttf */,
 				EDB39F3D289BA2FB007F85F3 /* Manrope-ExtraBold.ttf */,
-				EDB39F47289BA2FC007F85F3 /* Manrope-ExtraLight.ttf */,
-				EDB39F38289BA2FB007F85F3 /* Manrope-Light.ttf */,
-				EDB39F49289BA2FC007F85F3 /* Manrope-Medium.ttf */,
-				EDB39F4A289BA2FC007F85F3 /* Manrope-Regular.ttf */,
-				EDB39F4B289BA2FC007F85F3 /* Manrope-SemiBold.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -388,39 +325,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDB39F65289BA2FC007F85F3 /* Inter-Bold.otf in Resources */,
-				EDB39F54289BA2FC007F85F3 /* Inter-Italic.otf in Resources */,
 				ED6E126928B63E080042649F /* Launch Screen.storyboard in Resources */,
-				EDB39F61289BA2FC007F85F3 /* Inter-ExtraLight.otf in Resources */,
 				EDB39F5A289BA2FC007F85F3 /* Inter-Regular.otf in Resources */,
-				EDB39F55289BA2FC007F85F3 /* Inter-Black.otf in Resources */,
-				EDB39F64289BA2FC007F85F3 /* Manrope-SemiBold.ttf in Resources */,
-				EDB39F5E289BA2FC007F85F3 /* Inter-SemiBoldItalic.otf in Resources */,
 				ED99CE14289A54D600A2DE1F /* Preview Assets.xcassets in Resources */,
-				EDB39F5D289BA2FC007F85F3 /* Inter-BoldItalic.otf in Resources */,
 				EDB39F76289BBB12007F85F3 /* Golos Text_Black.ttf in Resources */,
-				EDB39F5B289BA2FC007F85F3 /* Inter-SemiBold.otf in Resources */,
-				EDB39F60289BA2FC007F85F3 /* Manrope-ExtraLight.ttf in Resources */,
 				EDB39F7A289BBB12007F85F3 /* Golos Text_Regular.ttf in Resources */,
-				EDB39F57289BA2FC007F85F3 /* Inter-LightItalic.otf in Resources */,
-				EDB39F51289BA2FC007F85F3 /* Manrope-Light.ttf in Resources */,
-				EDB39F5F289BA2FC007F85F3 /* Inter-Light.otf in Resources */,
-				EDB39F69289BA2FC007F85F3 /* Inter-ExtraBold.otf in Resources */,
 				ED47C74B28AA08E700CA1C71 /* Localizable.strings in Resources */,
-				EDB39F5C289BA2FC007F85F3 /* Inter-ThinItalic.otf in Resources */,
 				ED99CE11289A54D600A2DE1F /* Assets.xcassets in Resources */,
-				EDB39F62289BA2FC007F85F3 /* Manrope-Medium.ttf in Resources */,
 				EDB39F79289BBB12007F85F3 /* Golos Text_Medium.ttf in Resources */,
 				EDB39F56289BA2FC007F85F3 /* Manrope-ExtraBold.ttf in Resources */,
 				EDB39F78289BBB12007F85F3 /* Golos Text_Bold.ttf in Resources */,
 				EDB39F77289BBB12007F85F3 /* Golos Text_DemiBold.ttf in Resources */,
-				EDB39F53289BA2FC007F85F3 /* Inter-BlackItalic.otf in Resources */,
-				EDB39F66289BA2FC007F85F3 /* Inter-MediumItalic.otf in Resources */,
-				EDB39F58289BA2FC007F85F3 /* Inter-ExtraBoldItalic.otf in Resources */,
-				EDB39F52289BA2FC007F85F3 /* Inter-Thin.otf in Resources */,
 				EDB39F59289BA2FC007F85F3 /* Manrope-Bold.ttf in Resources */,
-				EDB39F67289BA2FC007F85F3 /* Inter-ExtraLightItalic.otf in Resources */,
-				EDB39F63289BA2FC007F85F3 /* Manrope-Regular.ttf in Resources */,
 				EDB39F68289BA2FC007F85F3 /* Inter-Medium.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -606,6 +522,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CreditMix/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Cash Credit";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
@@ -642,6 +559,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CreditMix/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Cash Credit";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";

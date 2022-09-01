@@ -16,7 +16,7 @@ struct CreditMixApp: App {
             MainView()
                 .preferredColorScheme(.dark)
                 .onAppear {
-                    print(Locale.current.regionCode ?? "US")
+                    print(Locale.current.regionCode ?? "Didn't get region code")
                 }
         }
     }

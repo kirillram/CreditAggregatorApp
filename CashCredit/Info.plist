@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Manrope-ExtraBold.ttf</string>
+		<string>Manrope-Bold.ttf</string>
+		<string>Inter-Regular.ttf</string>
+		<string>Inter-Medium.ttf</string>
+		<string>Golos Text_Black.ttf</string>
+		<string>Golos Text_Bold.ttf</string>
+		<string>Golos Text_DemiBold.ttf</string>
+		<string>Golos Text_Medium.ttf</string>
+		<string>Golos Text_Regular.ttf</string>
+	</array>
+	<key>UIStatusBarStyle</key>
+	<string>UIStatusBarStyleDarkContent</string>
+</dict>
+</plist>

@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import CloudKit
 
 struct NewsView: View {
     
@@ -38,8 +37,7 @@ struct NewsView: View {
             }
             .padding(20)
         }
-        .overlay(RoundedRectangle(cornerRadius: 12)
-            .stroke(Color("border")))
+        .overlay(RoundedRectangle(cornerRadius: 12).stroke(Color("border")))
         .background(.white)
         .cornerRadius(12)
         .shadow(color: Color.white.opacity(0.08), radius: 8, x: 0, y: 2)

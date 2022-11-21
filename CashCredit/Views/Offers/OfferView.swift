@@ -92,3 +92,9 @@ struct OfferView: View {
         .shadow(color: .white.opacity(0.04), radius: 8, x: 0, y: 2)
     }
 }
+
+struct sad_Previews: PreviewProvider {
+    static var previews: some View {
+        OfferView(green: true, offerSum: 1000, currency: "MX", allowedAge: 21, logo: Image("news"))
+    }
+}

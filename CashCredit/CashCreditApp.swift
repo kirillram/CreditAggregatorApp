@@ -14,7 +14,7 @@ struct CashCreditApp: App {
     var body: some Scene {
         WindowGroup {
             MainView()
-                .preferredColorScheme(.dark)
+                .preferredColorScheme(.light)
                 .onAppear {
                     print(Locale.current.regionCode ?? "Didn't get region code")
                 }

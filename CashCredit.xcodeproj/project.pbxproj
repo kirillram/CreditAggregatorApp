@@ -14,6 +14,7 @@
 		ED63810428AF2C3900B856DF /* OfferDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED63810328AF2C3900B856DF /* OfferDetailView.swift */; };
 		ED63810628AF2CA400B856DF /* OfferWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED63810528AF2CA400B856DF /* OfferWebView.swift */; };
 		ED6E126928B63E080042649F /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED6E126828B63E080042649F /* Launch Screen.storyboard */; };
+		ED8A30EF291145D400D22B6B /* OfferLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8A30EE291145D400D22B6B /* OfferLoader.swift */; };
 		ED99CE0D289A54D500A2DE1F /* CashCreditApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED99CE0C289A54D500A2DE1F /* CashCreditApp.swift */; };
 		ED99CE11289A54D600A2DE1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED99CE10289A54D600A2DE1F /* Assets.xcassets */; };
 		ED99CE14289A54D600A2DE1F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED99CE13289A54D600A2DE1F /* Preview Assets.xcassets */; };
@@ -47,6 +48,7 @@
 		EDC3CC2028A5FEEF00CE349B /* OfferViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC3CC1F28A5FEEF00CE349B /* OfferViewModel.swift */; };
 		EDC3CC4728A619D100CE349B /* ViewStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC3CC4628A619D100CE349B /* ViewStyles.swift */; };
 		EDC3CC4928A61AFF00CE349B /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC3CC4828A61AFF00CE349B /* TabItem.swift */; };
+		EDE7276C292BCF03004590F6 /* NewsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE7276B292BCF03004590F6 /* NewsLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +61,7 @@
 		ED63810328AF2C3900B856DF /* OfferDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferDetailView.swift; sourceTree = "<group>"; };
 		ED63810528AF2CA400B856DF /* OfferWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferWebView.swift; sourceTree = "<group>"; };
 		ED6E126828B63E080042649F /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		ED8A30EE291145D400D22B6B /* OfferLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferLoader.swift; sourceTree = "<group>"; };
 		ED99CE09289A54D500A2DE1F /* CashCredit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CashCredit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED99CE0C289A54D500A2DE1F /* CashCreditApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashCreditApp.swift; sourceTree = "<group>"; };
 		ED99CE10289A54D600A2DE1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -95,6 +98,7 @@
 		EDC3CC1F28A5FEEF00CE349B /* OfferViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferViewModel.swift; sourceTree = "<group>"; };
 		EDC3CC4628A619D100CE349B /* ViewStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStyles.swift; sourceTree = "<group>"; };
 		EDC3CC4828A61AFF00CE349B /* TabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItem.swift; sourceTree = "<group>"; };
+		EDE7276B292BCF03004590F6 /* NewsLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +159,7 @@
 				ED99CE10289A54D600A2DE1F /* Assets.xcassets */,
 				ED47C74D28AA08E700CA1C71 /* Localizable.strings */,
 				EDB39F35289BA23E007F85F3 /* Utilities.swift */,
+				EDC3CC1728A5F52700CE349B /* RoundedCornersShape.swift */,
 				EDC3CC4628A619D100CE349B /* ViewStyles.swift */,
 				EDB39F37289BA2D2007F85F3 /* Fonts */,
 				ED99CE12289A54D600A2DE1F /* Preview Content */,
@@ -209,6 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				EDB39F6F289BB39F007F85F3 /* OfferView.swift */,
+				ED8A30EE291145D400D22B6B /* OfferLoader.swift */,
 				ED4BF97228A129AB001E29E7 /* OffersPageView.swift */,
 				ED63810328AF2C3900B856DF /* OfferDetailView.swift */,
 				ED63810528AF2CA400B856DF /* OfferWebView.swift */,
@@ -220,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				EDC1BDE0289D082600FBD424 /* NewsView.swift */,
+				EDE7276B292BCF03004590F6 /* NewsLoader.swift */,
 				EDC1BDE2289D2CF700FBD424 /* NewsPageView.swift */,
 				EDC1BDE7289D35D400FBD424 /* NewsDetailView.swift */,
 				EDA624E228AA26400064C176 /* NewsWebView.swift */,
@@ -253,7 +260,6 @@
 		EDC3CC1628A5F4D300CE349B /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				EDC3CC1728A5F52700CE349B /* RoundedCornersShape.swift */,
 				EDC3CC1928A5F57E00CE349B /* News.swift */,
 				EDC3CC1B28A5F65200CE349B /* Question.swift */,
 				EDC3CC1D28A5FDFD00CE349B /* Offer.swift */,
@@ -349,6 +355,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED63810428AF2C3900B856DF /* OfferDetailView.swift in Sources */,
+				ED8A30EF291145D400D22B6B /* OfferLoader.swift in Sources */,
 				EDC1BDDE289CFED800FBD424 /* FaqPageView.swift in Sources */,
 				EDB39F7C289BD1E5007F85F3 /* TopView.swift in Sources */,
 				EDC1BDDB289CF8FF00FBD424 /* QuestionViewModel.swift in Sources */,
@@ -360,6 +367,7 @@
 				ED99CE1E289A872C00A2DE1F /* MainView.swift in Sources */,
 				EDC3CC1C28A5F65200CE349B /* Question.swift in Sources */,
 				EDB39F70289BB39F007F85F3 /* OfferView.swift in Sources */,
+				EDE7276C292BCF03004590F6 /* NewsLoader.swift in Sources */,
 				EDA624E328AA26400064C176 /* NewsWebView.swift in Sources */,
 				EDC1BDE1289D082600FBD424 /* NewsView.swift in Sources */,
 				ED99CE20289A953D00A2DE1F /* BottomView.swift in Sources */,

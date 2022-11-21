@@ -12,6 +12,7 @@ import UIKit
 
 final class NewsViewModel: ObservableObject {
     
+    
     @Published var showDetailView = false
     @Published var title = ""
     @Published var date = Date()
@@ -36,7 +37,7 @@ final class NewsViewModel: ObservableObject {
                     switch $0 {
                     case .success(let record):
                         
-//                        if record.value(forKey: "region") as? String == Locale.current.regionCode ?? "MX" || Locale.current.regionCode == "RU" {
+                        if record.value(forKey: "region") as? String == Locale.current.regionCode ?? "MX" || Locale.current.regionCode == "RU" {
                             
                             DispatchQueue.main.async {
                                 
@@ -66,7 +67,7 @@ final class NewsViewModel: ObservableObject {
                                 
                                 self.newsArray.append(news)
                             }
-//                        }
+                        }
                         
                     case .failure(let error):
                         print(error)

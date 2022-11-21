@@ -16,6 +16,7 @@ final class OfferViewModel: ObservableObject {
     @Published var showDetailView = false
     @Published var url: URL?
     @Published var progress = 0.0
+    @Published var loaded = false
     
     //MARK: - WebView
     @Published var canGoBack = false
@@ -41,7 +42,6 @@ final class OfferViewModel: ObservableObject {
         let predicate = NSPredicate(value: true)
         let query = CKQuery(recordType: "offer", predicate: predicate)
         
-        
         pdb.fetch(withQuery: query) { result in
             
             switch result {
@@ -51,7 +51,7 @@ final class OfferViewModel: ObservableObject {
                     switch $0 {
                     case .success(let record):
                         
-//                        if record.value(forKey: "region") as? String == Locale.current.regionCode ?? "US" || Locale.current.regionCode == "RU" {
+                        if record.value(forKey: "region") as? String == Locale.current.regionCode ?? "US" || Locale.current.regionCode == "RU" {
                             
                             DispatchQueue.main.async {
                                 //MARK: - Image
@@ -77,7 +77,7 @@ final class OfferViewModel: ObservableObject {
                                 
                                 self.offersArray.append(offer)
                             }
-//                        }
+                        }
                         
                     case .failure(let error):
                         print(error)
@@ -87,6 +87,11 @@ final class OfferViewModel: ObservableObject {
                 print("Didn't load up container because off: \(error)")
             }
         }
-        
+    }
+}
+
+struct OfferssaView_Previews: PreviewProvider {
+    static var previews: some View {
+        MainView()
     }
 }

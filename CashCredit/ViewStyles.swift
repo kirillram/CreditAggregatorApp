@@ -5,7 +5,6 @@
 //  Created by Кирилл on 12.08.2022.
 //
 
-import Foundation
 import SwiftUI
 
 struct MenuButtonsStyle: ButtonStyle {

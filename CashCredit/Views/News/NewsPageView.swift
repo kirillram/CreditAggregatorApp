@@ -21,18 +21,28 @@ struct NewsPageView: View {
                 .frame(height: 84)
             
             //MARK: - News
-            ForEach(nvm.newsArray.sorted { $0.order < $1.order }.reversed(), id: \.order) { news in
-                Button {
-                    nvm.currentDetailUrl = news.url
-                    nvm.showDetailView.toggle()
-                } label: {
-                    NewsView(title: news.title, date: news.date, image: news.image)
+            
+            if nvm.newsArray.count < 2 {
+                ForEach((1...5), id:\.self)  {_ in
+                    NewsLoader()
                 }
-                .buttonStyle(MenuButtonsStyle())
+                .listRowInsets(EdgeInsets())
+                .listRowBackground(Color.clear)
+                .listRowSeparatorTint(Color.clear, edges: .all)
+            } else {
+                ForEach(nvm.newsArray.sorted { $0.order < $1.order }.reversed(), id: \.order) { news in
+                    Button {
+                        nvm.currentDetailUrl = news.url
+                        nvm.showDetailView.toggle()
+                    } label: {
+                        NewsView(title: news.title, date: news.date, image: news.image)
+                    }
+                    .buttonStyle(MenuButtonsStyle())
+                }
+                .listRowInsets(EdgeInsets())
+                .listRowBackground(Color.clear)
+                .listRowSeparatorTint(Color.clear, edges: .all)
             }
-            .listRowInsets(EdgeInsets())
-            .listRowBackground(Color.clear)
-            .listRowSeparatorTint(Color.clear, edges: .all)
             
             //MARK: - Padding bottom
             PaddingView(withProgressView: false)

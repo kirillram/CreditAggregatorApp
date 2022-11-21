@@ -12,14 +12,24 @@ struct OffersPageView: View {
     
     @StateObject var ovm: OfferViewModel
     
+    
     var body: some View {
         
+        
         List {
-            //MARK: - //MARK: - Padding top
+            //MARK: - Padding top
             PaddingView(withProgressView: true)
                 .frame(height: 84)
             
             //MARK: - Offers
+            if ovm.offersArray.count < 8 {
+                ForEach((1...5), id:\.self)  {_ in
+                    OfferLoader()
+                }
+                .listRowInsets(EdgeInsets())
+                .listRowBackground(Color.clear)
+                .listRowSeparatorTint(Color.clear, edges: .all)
+            } else {
                 ForEach(ovm.offersArray.sorted { $0.order < $1.order }, id: \.order) { offer in
                     Button {
                         ovm.url = offer.url
@@ -33,6 +43,7 @@ struct OffersPageView: View {
                 .listRowInsets(EdgeInsets())
                 .listRowBackground(Color.clear)
                 .listRowSeparatorTint(Color.clear, edges: .all)
+            }
             
             //MARK: - Padding bottom
             PaddingView(withProgressView: false)

@@ -3,7 +3,7 @@
 App is written in SwiftUI with WKWebView in MVVC without any 3rd party libraries. Cloud storage was used as database. The app is localized depending on the language of the device.
 
 ##FAQ page
-![FAQ](https://user-images.githubusercontent.com/31224828/203208054-8752cffb-d4ee-4782-9b39-797fb67129ae.png | width=25%)
+![FAQ](https://user-images.githubusercontent.com/31224828/203208054-8752cffb-d4ee-4782-9b39-797fb67129ae.png  | width=25 )
 
 ##Offers page
 ![offers](https://user-images.githubusercontent.com/31224828/203208090-1a3fa989-feae-46c8-9195-9affbcc002e1.png)

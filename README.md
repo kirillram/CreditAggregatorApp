@@ -1,6 +1,6 @@
 # Credit Aggregator App
 
-This app was planned to go on market but because of the recent moderation restrictions that never happened so now it's free for opensource. The app is written in SwiftUI with WKWebView implemented as internal browser. Cloud storage was used as database. No 3rd party libraries were used.
+This app was planned to go on market but because of the recent moderation restrictions that never happened so now it's free for opensource. The app is written in SwiftUI with WKWebView implemented as internal browser. Cloud storage was used as database, news are uploaded from Github Pages. No 3rd party libraries were used.
 
 #### The app is localized due to the language code of the device though it could be changed in the device settings. Content like offers and news are fetched from Cloud storage and filtered by a region code of the device.
 

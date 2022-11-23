@@ -26,7 +26,7 @@ struct NewsLoader: View {
          }
         }
         .clipShape(RoundedRectangle(cornerRadius: 12))
-        .frame(height: 204)
+        .frame(height: 314)
         .padding(.bottom, 20)
         .padding(.horizontal, 16)
         .shadow(color: .white.opacity(0.04), radius: 8, x: 0, y: 2)
